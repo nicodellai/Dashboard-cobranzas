@@ -714,7 +714,8 @@ tr:hover {
     flex-direction: column;
     gap: 7px;
     max-height: 245px;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     padding-right: 4px;
 }
 
@@ -742,7 +743,15 @@ tr:hover {
 }
 
 .debt-legend-row {
-    grid-template-columns: 12px 1fr auto;
+    grid-template-columns: 12px auto minmax(0, 1fr);
+    column-gap: 7px;
+    width: 100%;
+}
+
+.debt-legend-row .pie-value {
+    text-align: right;
+    font-size: 10px;
+    overflow: visible;
 }
 
 .seller-percent-row {
