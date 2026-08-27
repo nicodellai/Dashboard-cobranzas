@@ -204,17 +204,17 @@ th {
 }
 
 .period-title {
-    height: 18px;
+    height: 21px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-size: 13px;
-    margin-bottom: 5px;
+    font-size: 15px;
+    margin-bottom: 6px;
 }
 
 .period-flow {
-    height: 38px;
+    height: 46px;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     gap: 1px;
@@ -223,8 +223,8 @@ th {
     border-radius: 7px;
     background: rgba(255,255,255,0.62);
     color: #475569;
-    font-size: 9px;
-    line-height: 1.15;
+    font-size: 11px;
+    line-height: 1.2;
     text-align: left;
 }
 
@@ -237,13 +237,13 @@ th {
 
 .period-flow-row strong {
     color: #172033;
-    font-size: 9px;
+    font-size: 11px;
     text-align: right;
     white-space: nowrap;
 }
 
 .historical-balance {
-    height: 53px;
+    height: 60px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -252,26 +252,26 @@ th {
 
 .header-balance-label {
     color: #64748b;
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 700;
     margin: 0;
 }
 
 .header-balance-value {
     color: #172033;
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 800;
     margin: 2px 0 4px;
     white-space: nowrap;
 }
 
 .current-balance {
-    font-size: 9px;
+    font-size: 11px;
     margin-bottom: 4px;
 }
 
 .subcol-name {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 800;
     margin-bottom: 1px;
 }
@@ -962,7 +962,7 @@ tr:hover {
                     <th colspan='3' class='week-group week-current'><div class='period-title'>Saldo actual</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$557.044.255,44</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$431.464.566,00</strong></div></div></th><th rowspan='2' class='week-group week-t1'><div class='period-title'>Saldo semana pasada</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$295.478.747,16</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$532.938.602,67</strong></div></div><div class='historical-balance'><div class='header-balance-label'>Saldo total</div><div class='header-balance-value'>$3.922.586.850,39</div></div></th><th rowspan='2' class='week-group week-t2'><div class='period-title'>Saldo hace dos semanas</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$458.154.951,36</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$370.548.523,23</strong></div></div><div class='historical-balance'><div class='header-balance-label'>Saldo total</div><div class='header-balance-value'>$4.060.196.267,11</div></div></th><th rowspan='2' class='week-group week-t3'><div class='period-title'>Saldo hace 3 semanas</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$672.654.210,60</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$717.256.267,81</strong></div></div><div class='historical-balance'><div class='header-balance-label'>Saldo total</div><div class='header-balance-value'>$4.145.880.447,93</div></div></th><th rowspan='2' class='week-group week-t4'><div class='period-title'>Saldo hace un mes</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$723.641.927,07</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$686.988.480,72</strong></div></div><div class='historical-balance'><div class='header-balance-label'>Saldo total</div><div class='header-balance-value'>$3.957.087.667,58</div></div></th><th rowspan='2' class='week-group evolution-header'><div class='period-title'>Evolución semanal</div><div class='small-label'>Saldo actual vs semana pasada</div><div class='net-evolution net-down'><span class='net-arrow'>↓</span>$165.755.362,39</div></th><th rowspan='2' class='week-group evolution-header'><div class='period-title'>Evolución mensual</div><div class='small-label'>Saldo actual vs un mes atrás</div><div class='net-evolution net-down'><span class='net-arrow'>↓</span>$200.256.179,58</div></th>
                 </tr>
                 <tr>
-                    <th class='current-subcol'><div class='subcol-name'>Vencido</div><div class='header-balance-value current-balance'>$1.512.751.218,19</div><select id='ordenTVencido' class='header-filter sort-filter' onchange='ordenarDeudaPor(\'vencido\')'><option value=''>Ordenar</option><option value='desc'>Mayor a menor</option><option value='asc'>Menor a mayor</option></select></th><th class='current-subcol'><div class='subcol-name'>Vigente</div><div class='header-balance-value current-balance'>$2.244.080.269,81</div><select id='ordenTVigente' class='header-filter sort-filter' onchange='ordenarDeudaPor(\'vigente\')'><option value=''>Ordenar</option><option value='desc'>Mayor a menor</option><option value='asc'>Menor a mayor</option></select></th><th class='current-subcol current-subcol-last'><div class='subcol-name'>Total</div><div class='header-balance-value current-balance'>$3.756.831.488,00</div><select id='ordenTTotal' class='header-filter sort-filter' onchange='ordenarDeudaPor(\'total\')'><option value=''>Ordenar</option><option value='desc'>Mayor a menor</option><option value='asc'>Menor a mayor</option></select></th>
+                    <th class='current-subcol'><div class='subcol-name'>Vencido</div><div class='header-balance-value current-balance'>$1.512.751.218,19</div><select id='ordenTVencido' class='header-filter sort-filter' onchange="ordenarDeudaPor('vencido')"><option value=''>Ordenar</option><option value='desc'>Mayor a menor</option><option value='asc'>Menor a mayor</option></select></th><th class='current-subcol'><div class='subcol-name'>Vigente</div><div class='header-balance-value current-balance'>$2.244.080.269,81</div><select id='ordenTVigente' class='header-filter sort-filter' onchange="ordenarDeudaPor('vigente')"><option value=''>Ordenar</option><option value='desc'>Mayor a menor</option><option value='asc'>Menor a mayor</option></select></th><th class='current-subcol current-subcol-last'><div class='subcol-name'>Total</div><div class='header-balance-value current-balance'>$3.756.831.488,00</div><select id='ordenTTotal' class='header-filter sort-filter' onchange="ordenarDeudaPor('total')"><option value=''>Ordenar</option><option value='desc'>Mayor a menor</option><option value='asc'>Menor a mayor</option></select></th>
                 </tr>
             </thead>
             <tbody>
