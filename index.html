@@ -34884,6 +34884,14 @@ function escaparHTML(texto) {
         .replaceAll("'", "&#39;");
 }
 
+function formatoMoneda(valor) {
+    const numero = Number(valor || 0);
+    return "$" + numero.toLocaleString("es-AR", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+}
+
 let vendedorSeleccionado = "";
 
 function filtrarCobrosPorColumnas() {
