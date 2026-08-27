@@ -484,8 +484,8 @@ tr:hover {
 }
 
 #tablaCobros {
-    width: auto;
-    min-width: 720px;
+    width: 100%;
+    min-width: 760px;
     table-layout: auto;
 }
 
@@ -519,6 +519,25 @@ tr:hover {
 
 #tablaCobros td:nth-child(3) {
     white-space: normal;
+}
+
+#tablaCobros th,
+#tablaCobros td {
+    border-right: 1px solid #cbd5e1;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+#tablaCobros th:first-child,
+#tablaCobros td:first-child {
+    border-left: 1px solid #cbd5e1;
+}
+
+#tablaCobros thead th {
+    border-top: 1px solid #cbd5e1;
+}
+
+#tablaCobros tbody tr:hover {
+    background: #f8fafc;
 }
 
 .sort-filter {
@@ -906,7 +925,7 @@ tr:hover {
 <main>
 
 <div class="tabs">
-    <button class="tab-button active" onclick="openTab('tabDeuda', this)">Resumen de deuda</button>
+    <button class="tab-button active" onclick="openTab('tabDeuda', this)">Deuda por cliente</button>
     <button class="tab-button" onclick="openTab('tabCobros', this)">Cobranzas realizadas</button>
     <button class="tab-button" onclick="openTab('tabVendedores', this)">Resumen general de deuda y cobranza</button>
     <div class="updated">Actualizado: 27/08/2026</div>
@@ -919,7 +938,7 @@ tr:hover {
 <section id="tabDeuda" class="tab-content active">
 <div class="panel">
 
-    <h2>Resumen de deuda</h2>
+    <h2>Deuda por cliente</h2>
 
     <div class="table-wrap">
         <table id="tablaResumenDeuda">
@@ -970,19 +989,27 @@ tr:hover {
     <h2>Cobranzas realizadas</h2>
     <p>Registro de cobranzas tomado directamente del archivo Cobranzas realizadas.xlsx.</p>
 
-    <div class="toolbar">
-        <input id="filtroCobros" placeholder="Buscar cliente, código o fecha..." oninput="filtrarCobrosDebounced(this.value)">
-        <button class="clear-button" onclick="limpiarFiltroCobros()">Limpiar filtro</button>
-    </div>
 
     <div class="table-wrap">
         <table id="tablaCobros">
             <thead>
                 <tr>
-                    <th>Fecha de cobro</th>
-                    <th>Cód. cliente</th>
-                    <th class="left">Razón social</th>
-                    <th>Total cobrado Mon. Cte.</th>
+                    <th>
+                        <div class="header-title">Fecha de cobro</div>
+                        <input id="filtroCobroFecha" class="header-filter" placeholder="Filtrar..." oninput="filtrarCobrosPorColumnas()">
+                    </th>
+                    <th>
+                        <div class="header-title">Cód. cliente</div>
+                        <input id="filtroCobroCodigo" class="header-filter" placeholder="Filtrar..." oninput="filtrarCobrosPorColumnas()">
+                    </th>
+                    <th class="left">
+                        <div class="header-title">Razón social</div>
+                        <input id="filtroCobroRazon" class="header-filter" placeholder="Filtrar..." oninput="filtrarCobrosPorColumnas()">
+                    </th>
+                    <th>
+                        <div class="header-title">Total cobrado Mon. Cte.</div>
+                        <input id="filtroCobroTotal" class="header-filter" placeholder="Filtrar..." oninput="filtrarCobrosPorColumnas()">
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -34783,36 +34810,35 @@ function ordenarDeudaPor(tipo) {
     const tbody = tabla.querySelector("tbody");
     const filas = Array.from(tbody.querySelectorAll("tr"));
 
-    const mapaSelectores = {
-        vencido: "ordenTVencido",
-        vigente: "ordenTVigente",
-        total: "ordenTTotal"
+    const config = {
+        vencido: { select: "ordenTVencido", attr: "data-tvencido" },
+        vigente: { select: "ordenTVigente", attr: "data-tvigente" },
+        total: { select: "ordenTTotal", attr: "data-ttotal" }
     };
 
-    const mapaDatos = {
-        vencido: "tvencido",
-        vigente: "tvigente",
-        total: "ttotal"
-    };
+    const cfg = config[tipo];
+    if (!cfg) return;
 
-    const selectorActual = document.getElementById(mapaSelectores[tipo]);
-    const orden = selectorActual ? selectorActual.value : "";
+    const selector = document.getElementById(cfg.select);
+    if (!selector) return;
+
+    const orden = selector.value;
     if (!orden) return;
 
-    // Al ordenar por una columna, limpiar los otros selectores.
-    Object.entries(mapaSelectores).forEach(([clave, id]) => {
+    // Limpia visualmente los otros selectores.
+    Object.entries(config).forEach(([clave, valor]) => {
         if (clave !== tipo) {
-            const sel = document.getElementById(id);
-            if (sel) sel.value = "";
+            const otro = document.getElementById(valor.select);
+            if (otro) otro.value = "";
         }
     });
 
-    const atributo = mapaDatos[tipo];
-
     filas.sort((a, b) => {
-        const va = Number(a.dataset[atributo] || 0);
-        const vb = Number(b.dataset[atributo] || 0);
-        return orden === "asc" ? va - vb : vb - va;
+        const va = parseFloat(a.getAttribute(cfg.attr) || "0");
+        const vb = parseFloat(b.getAttribute(cfg.attr) || "0");
+
+        if (orden === "asc") return va - vb;
+        return vb - va;
     });
 
     filas.forEach(fila => tbody.appendChild(fila));
@@ -34820,40 +34846,6 @@ function ordenarDeudaPor(tipo) {
 
 let cobrosSearchCache = [];
 let cobrosFilterTimer = null;
-
-function inicializarCacheCobros() {
-    const rows = Array.from(
-        document.querySelectorAll("#tablaCobros tbody tr")
-    );
-
-    cobrosSearchCache = rows.map(row => {
-        // Se normaliza una sola vez al cargar el dashboard.
-        const texto = normalizarTextoJS(row.textContent || "");
-        return { row, texto };
-    });
-}
-
-function filtrarCobros(valor) {
-    const q = normalizarTextoJS(valor);
-
-    for (const item of cobrosSearchCache) {
-        item.row.hidden = !!q && !item.texto.includes(q);
-    }
-}
-
-function filtrarCobrosDebounced(valor) {
-    clearTimeout(cobrosFilterTimer);
-
-    cobrosFilterTimer = setTimeout(() => {
-        filtrarCobros(valor);
-    }, 180);
-}
-
-function limpiarFiltroCobros() {
-    document.getElementById("filtroCobros").value = "";
-    clearTimeout(cobrosFilterTimer);
-    filtrarCobros("");
-}
 
 function fmtMoney(valor) {
     return Number(valor || 0).toLocaleString("es-AR", {
@@ -34873,6 +34865,40 @@ function escaparHTML(texto) {
 }
 
 let vendedorSeleccionado = "";
+
+function filtrarCobrosPorColumnas() {
+    const fecha = normalizarTextoJS(
+        document.getElementById("filtroCobroFecha")?.value || ""
+    );
+    const codigo = normalizarTextoJS(
+        document.getElementById("filtroCobroCodigo")?.value || ""
+    );
+    const razon = normalizarTextoJS(
+        document.getElementById("filtroCobroRazon")?.value || ""
+    );
+    const total = normalizarTextoJS(
+        document.getElementById("filtroCobroTotal")?.value || ""
+    );
+
+    const filas = document.querySelectorAll("#tablaCobros tbody tr");
+
+    filas.forEach(fila => {
+        const celdas = fila.querySelectorAll("td");
+
+        const valorFecha = normalizarTextoJS(celdas[0]?.textContent || "");
+        const valorCodigo = normalizarTextoJS(celdas[1]?.textContent || "");
+        const valorRazon = normalizarTextoJS(celdas[2]?.textContent || "");
+        const valorTotal = normalizarTextoJS(celdas[3]?.textContent || "");
+
+        const visible =
+            (!fecha || valorFecha.includes(fecha)) &&
+            (!codigo || valorCodigo.includes(codigo)) &&
+            (!razon || valorRazon.includes(razon)) &&
+            (!total || valorTotal.includes(total));
+
+        fila.style.display = visible ? "" : "none";
+    });
+}
 
 function seleccionarVendedor(vendedor, row) {
     vendedorSeleccionado = vendedor;
@@ -35114,7 +35140,6 @@ function renderPieVendedores() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    inicializarCacheCobros();
     renderSellerChart();
     renderPieEstado();
     renderPieVendedores();
