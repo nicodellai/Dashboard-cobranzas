@@ -559,6 +559,14 @@ tr:hover {
     font-weight: 700;
 }
 
+.simple-legend {
+    grid-template-columns: 12px 1fr;
+}
+
+.seller-percent-row {
+    grid-template-columns: 12px 1fr auto;
+}
+
 .bar-external-labels {
     display: flex;
     gap: 10px;
@@ -34569,9 +34577,7 @@ tr:hover {
         <div class="pie-card">
             <h3>Participación por vendedor</h3>
             <p>Porcentaje de la deuda total correspondiente a cada vendedor.</p>
-            <div id="pieVendedores" class="pie">
-                <div class="pie-center">100%<br>deuda total</div>
-            </div>
+            <div id="pieVendedores" class="pie"></div>
             <div id="pieVendedoresLegend" class="pie-legend"></div>
         </div>
 
@@ -34870,7 +34876,6 @@ function renderPieEstado() {
         "conic-gradient(#dc2626 0% " + pctVencido + "%, " +
         "#16a34a " + pctVencido + "% 100%)";
 
-    // Posicionar etiquetas aproximadamente en el centro angular de cada sector.
     const colocarEtiqueta = (el, inicioPct, finPct, texto) => {
         if (!el) return;
         const medioPct = (inicioPct + finPct) / 2;
@@ -34885,21 +34890,19 @@ function renderPieEstado() {
         el.textContent = texto;
     };
 
-    colocarEtiqueta(labelVencida, 0, pctVencido, "Vencida");
-    colocarEtiqueta(labelVigente, pctVencido, 100, "Vigente");
+    // Dentro de la torta: solamente los porcentajes.
+    colocarEtiqueta(labelVencida, 0, pctVencido, pctVencido.toFixed(1) + "%");
+    colocarEtiqueta(labelVigente, pctVencido, 100, pctVigente.toFixed(1) + "%");
 
+    // Abajo: solo leyenda de colores, sin montos ni porcentajes repetidos.
     legend.innerHTML =
-        '<div class="pie-legend-row">' +
+        '<div class="pie-legend-row simple-legend">' +
             '<span class="pie-dot" style="background:#dc2626;"></span>' +
             '<span>Vencida</span>' +
-            '<span class="pie-value">' + formatoMoneda(vencido) +
-            ' (' + pctVencido.toFixed(1) + '%)</span>' +
         '</div>' +
-        '<div class="pie-legend-row">' +
+        '<div class="pie-legend-row simple-legend">' +
             '<span class="pie-dot" style="background:#16a34a;"></span>' +
             '<span>Vigente</span>' +
-            '<span class="pie-value">' + formatoMoneda(vigente) +
-            ' (' + pctVigente.toFixed(1) + '%)</span>' +
         '</div>';
 }
 
@@ -34911,9 +34914,12 @@ function renderPieVendedores() {
     const datos = sellerChartData
         .slice()
         .filter(x => Number(x.total || 0) > 0)
-        .sort((a, b) => b.total - a.total);
+        .sort((a, b) => Number(b.total || 0) - Number(a.total || 0));
 
-    const totalGeneral = datos.reduce((acc, x) => acc + Number(x.total || 0), 0);
+    const totalGeneral = datos.reduce(
+        (acc, x) => acc + Number(x.total || 0),
+        0
+    );
 
     const colores = [
         "#2563eb", "#7c3aed", "#ea580c", "#0891b2", "#db2777",
@@ -34922,35 +34928,43 @@ function renderPieVendedores() {
         "#14b8a6", "#6366f1", "#e11d48", "#22c55e", "#64748b"
     ];
 
+    if (totalGeneral <= 0 || datos.length === 0) {
+        pie.style.background = "#e5e7eb";
+        legend.innerHTML = '<div class="no-data">Sin deuda para mostrar.</div>';
+        return;
+    }
+
     let acumulado = 0;
     const tramos = [];
 
     datos.forEach((x, i) => {
-        const pct = totalGeneral > 0 ? (x.total / totalGeneral) * 100 : 0;
+        const totalVendedor = Number(x.total || 0);
+        const pct = (totalVendedor / totalGeneral) * 100;
         const inicio = acumulado;
         acumulado += pct;
         const color = colores[i % colores.length];
 
-        tramos.push(`${color} ${inicio}% ${acumulado}%`);
+        tramos.push(
+            color + " " + inicio.toFixed(4) + "% " + acumulado.toFixed(4) + "%"
+        );
     });
 
-    pie.style.background = tramos.length
-        ? `conic-gradient(${tramos.join(", ")})`
-        : "#e5e7eb";
+    pie.style.background = "conic-gradient(" + tramos.join(", ") + ")";
 
     legend.innerHTML = "";
 
     datos.forEach((x, i) => {
-        const pct = totalGeneral > 0 ? (x.total / totalGeneral) * 100 : 0;
+        const totalVendedor = Number(x.total || 0);
+        const pct = (totalVendedor / totalGeneral) * 100;
         const color = colores[i % colores.length];
 
         const row = document.createElement("div");
-        row.className = "pie-legend-row";
-        row.innerHTML = `
-            <span class="pie-dot" style="background:${color}"></span>
-            <span>${escaparHTML(x.vendedor)} (${pct.toFixed(1)}%)</span>
-            <span class="pie-value">${fmtMoney(x.total)}</span>
-        `;
+        row.className = "pie-legend-row seller-percent-row";
+        row.innerHTML =
+            '<span class="pie-dot" style="background:' + color + '"></span>' +
+            '<span>' + escaparHTML(x.vendedor) + '</span>' +
+            '<span class="pie-value">' + pct.toFixed(1) + '%</span>';
+
         legend.appendChild(row);
     });
 }
