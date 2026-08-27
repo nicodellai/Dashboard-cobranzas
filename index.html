@@ -82,6 +82,20 @@ main {
     font-size: 13px;
 }
 
+.updated-dates {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+.updated-dates strong {
+    color: #334155;
+}
+
+
 .tab-content {
     display: none;
 }
@@ -431,9 +445,9 @@ tr:hover {
 
 #tablaResumenDeuda .summary-header,
 #tablaResumenDeuda td:nth-child(4) {
-    width: 118px;
-    min-width: 118px;
-    max-width: 118px;
+    width: 128px;
+    min-width: 128px;
+    max-width: 128px;
 }
 
 .summary-cell {
@@ -989,7 +1003,10 @@ tr:hover {
     <button class="tab-button active" onclick="openTab('tabDeuda', this)">Deuda por cliente</button>
     <button class="tab-button" onclick="openTab('tabCobros', this)">Cobranzas realizadas</button>
     <button class="tab-button" onclick="openTab('tabVendedores', this)">Resumen general de deuda y cobranza</button>
-    <div class="updated">Actualizado: 27/08/2026</div>
+    <div class="updated updated-dates">
+        <div><strong>Saldos:</strong> 27/08/2026</div>
+        <div><strong>Resúmenes:</strong> <span id="fechaActualizacionResumenes">—</span></div>
+    </div>
 </div>
 
 <!-- ======================================================
@@ -1021,7 +1038,7 @@ tr:hover {
                         </select>
                     </th>
                     <th rowspan="2" class="summary-header">
-                        <div class="header-title">Resumen</div>
+                        <div class="header-title">Resumen de cuenta</div>
                     </th>
                     <th colspan='3' class='week-group week-current'><div class='period-title'>Saldo actual</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$557.044.255,44</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$431.464.566,00</strong></div></div></th><th rowspan='2' class='week-group week-t1'><div class='period-title'>Saldo semana pasada</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$295.478.747,16</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$532.938.602,67</strong></div></div><div class='historical-balance'><div class='header-balance-label'>Saldo total</div><div class='header-balance-value'>$3.922.586.850,39</div></div></th><th rowspan='2' class='week-group week-t2'><div class='period-title'>Saldo hace dos semanas</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$458.154.951,36</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$370.548.523,23</strong></div></div><div class='historical-balance'><div class='header-balance-label'>Saldo total</div><div class='header-balance-value'>$4.060.196.267,11</div></div></th><th rowspan='2' class='week-group week-t3'><div class='period-title'>Saldo hace 3 semanas</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$672.654.210,60</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$717.256.267,81</strong></div></div><div class='historical-balance'><div class='header-balance-label'>Saldo total</div><div class='header-balance-value'>$4.145.880.447,93</div></div></th><th rowspan='2' class='week-group week-t4'><div class='period-title'>Saldo hace un mes</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$723.641.927,07</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$686.988.480,72</strong></div></div><div class='historical-balance'><div class='header-balance-label'>Saldo total</div><div class='header-balance-value'>$3.957.087.667,58</div></div></th><th rowspan='2' class='week-group evolution-header'><div class='period-title'>Evolución semanal</div><div class='small-label'>Saldo actual vs semana pasada</div><div class='net-evolution net-down'><span class='net-arrow'>↓</span>$165.755.362,39</div></th><th rowspan='2' class='week-group evolution-header'><div class='period-title'>Evolución mensual</div><div class='small-label'>Saldo actual vs un mes atrás</div><div class='net-evolution net-down'><span class='net-arrow'>↓</span>$200.256.179,58</div></th>
                 </tr>
@@ -35218,53 +35235,93 @@ async function cargarResumenesClientes() {
         document.querySelectorAll("#tablaResumenDeuda .summary-cell")
     );
 
-    if (!celdas.length) return;
-
     try {
         const respuesta = await fetch(
-            "resumenes/resumenes_index.json?ts=" + Date.now(),
+            "./resumenes/resumenes_index.json?ts=" + Date.now(),
             { cache: "no-store" }
         );
 
         if (!respuesta.ok) {
-            throw new Error("No se pudo leer el índice de resúmenes.");
+            throw new Error(
+                "No se pudo leer resumenes_index.json. HTTP " + respuesta.status
+            );
         }
 
         const indice = await respuesta.json();
 
         celdas.forEach(celda => {
-            const codigo = String(celda.dataset.summaryCode || "").trim();
+            const codigo = String(celda.dataset.summaryCode || "")
+                .trim()
+                .padStart(6, "0");
+
             const info = indice[codigo];
 
             if (!info || !info.archivo) {
-                celda.innerHTML = '<span class="summary-unavailable">—</span>';
+                celda.innerHTML =
+                    '<span class="summary-unavailable" ' +
+                    'title="No hay resumen publicado para este cliente">—</span>';
                 return;
             }
 
-            const href = "resumenes/" + encodeURIComponent(info.archivo);
+            const href =
+                "./resumenes/" +
+                String(info.archivo)
+                    .split("/")
+                    .map(encodeURIComponent)
+                    .join("/");
 
             celda.innerHTML =
-                '<a class="summary-download" href="' + href + '" download ' +
-                'title="Descargar resumen de cuenta">' +
+                '<a class="summary-download" href="' + href + '" ' +
+                'target="_blank" rel="noopener" ' +
+                'title="Abrir o descargar resumen de cuenta">' +
                 '<svg viewBox="0 0 24 24" aria-hidden="true">' +
                 '<path d="M12 3v12m0 0 5-5m-5 5-5-5M5 19h14" ' +
                 'fill="none" stroke="currentColor" stroke-width="2" ' +
                 'stroke-linecap="round" stroke-linejoin="round"></path>' +
                 '</svg>' +
-                '<span>Resumen</span>' +
+                '<span>Descargar</span>' +
                 '</a>';
         });
     } catch (error) {
         console.warn("No se pudieron cargar los resúmenes:", error);
+
         celdas.forEach(celda => {
-            celda.innerHTML = '<span class="summary-unavailable">—</span>';
+            celda.innerHTML =
+                '<span class="summary-unavailable" ' +
+                'title="No se pudo consultar la lista de resúmenes">—</span>';
         });
+    }
+}
+
+async function cargarFechaActualizacionResumenes() {
+    const elemento = document.getElementById("fechaActualizacionResumenes");
+    if (!elemento) return;
+
+    try {
+        const respuesta = await fetch(
+            "./resumenes/meta_resumenes.json?ts=" + Date.now(),
+            { cache: "no-store" }
+        );
+
+        if (!respuesta.ok) {
+            throw new Error("HTTP " + respuesta.status);
+        }
+
+        const meta = await respuesta.json();
+        elemento.textContent = meta.fecha || "—";
+    } catch (error) {
+        console.warn(
+            "No se pudo cargar la fecha de actualización de resúmenes:",
+            error
+        );
+        elemento.textContent = "—";
     }
 }
 
 
 document.addEventListener("DOMContentLoaded", () => {
     cargarResumenesClientes();
+    cargarFechaActualizacionResumenes();
     renderSellerChart();
     renderPieEstado();
     renderPieVendedores();
