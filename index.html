@@ -408,6 +408,13 @@ tr:hover {
     max-width: 112px;
 }
 
+#tablaResumenDeuda .code-header .header-title {
+    white-space: normal;
+    line-height: 1.05;
+    font-size: 11px;
+    text-align: center;
+}
+
 #tablaResumenDeuda .reason-header,
 #tablaResumenDeuda td:nth-child(2) {
     width: 245px;
@@ -732,6 +739,10 @@ tr:hover {
 
 .simple-legend {
     grid-template-columns: 12px 1fr;
+}
+
+.debt-legend-row {
+    grid-template-columns: 12px 1fr auto;
 }
 
 .seller-percent-row {
@@ -35065,13 +35076,15 @@ function renderPieEstado() {
 
     // Abajo: solo leyenda de colores, sin montos ni porcentajes repetidos.
     legend.innerHTML =
-        '<div class="pie-legend-row simple-legend">' +
+        '<div class="pie-legend-row debt-legend-row">' +
             '<span class="pie-dot" style="background:#dc2626;"></span>' +
             '<span>Vencida</span>' +
+            '<span class="pie-value">' + formatoMoneda(vencido) + '</span>' +
         '</div>' +
-        '<div class="pie-legend-row simple-legend">' +
+        '<div class="pie-legend-row debt-legend-row">' +
             '<span class="pie-dot" style="background:#16a34a;"></span>' +
             '<span>Vigente</span>' +
+            '<span class="pie-value">' + formatoMoneda(vigente) + '</span>' +
         '</div>';
 }
 
