@@ -35231,8 +35231,7 @@ async function copiarDetalleCliente() {
         );
     });
 
-    const texto = lineas.join("
-");
+    const texto = lineas.join("\n");
 
     try {
         await navigator.clipboard.writeText(texto);
