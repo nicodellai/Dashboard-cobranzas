@@ -19,10 +19,6 @@
     "razon_social": "BRALU SA",
     "archivo": "000008_BRALU SA.pdf"
   },
-  "000009": {
-    "razon_social": "BREME HNOS SRL",
-    "archivo": "000009_BREME HNOS SRL.pdf"
-  },
   "000010": {
     "razon_social": "CARNES EL PICHON SA",
     "archivo": "000010_CARNES EL PICHON SA.pdf"
@@ -74,6 +70,10 @@
   "000030": {
     "razon_social": "ESTANCIAS Y CABAÑA LAS LILAS S",
     "archivo": "000030_ESTANCIAS Y CABAÑA LAS LILAS S.pdf"
+  },
+  "000031": {
+    "razon_social": "EZCURRA MIGUEL",
+    "archivo": "000031_EZCURRA MIGUEL.pdf"
   },
   "000032": {
     "razon_social": "FADEL SA",
@@ -143,9 +143,13 @@
     "razon_social": "LOANS SA",
     "archivo": "000054_LOANS SA.pdf"
   },
+  "000056": {
+    "razon_social": "LOS TRES PALOS SA",
+    "archivo": "000056_LOS TRES PALOS SA.pdf"
+  },
   "000057": {
-    "razon_social": "MIROLU SA",
-    "archivo": "000057_MIROLU SA.pdf"
+    "razon_social": "MIROLU S.A.",
+    "archivo": "000057_MIROLU S.A..pdf"
   },
   "000059": {
     "razon_social": "MONVALE CARLOS",
@@ -182,6 +186,10 @@
   "000076": {
     "razon_social": "YAFEGA SRL",
     "archivo": "000076_YAFEGA SRL.pdf"
+  },
+  "000077": {
+    "razon_social": "ZORZON RICARDO",
+    "archivo": "000077_ZORZON RICARDO.pdf"
   },
   "000078": {
     "razon_social": "BRAVESTAR SA",
@@ -463,10 +471,6 @@
     "razon_social": "SYC AGROPECUARIA Y FORESTO IND",
     "archivo": "000232_SYC AGROPECUARIA Y FORESTO IND.pdf"
   },
-  "000233": {
-    "razon_social": "DE HAES NESTOR",
-    "archivo": "000233_DE HAES NESTOR.pdf"
-  },
   "000234": {
     "razon_social": "TOZZI, HUMBERTO PEDRO",
     "archivo": "000234_TOZZI, HUMBERTO PEDRO.pdf"
@@ -574,10 +578,6 @@
   "000331": {
     "razon_social": "PADOAN CLAUDIO FABIAN",
     "archivo": "000331_PADOAN CLAUDIO FABIAN.pdf"
-  },
-  "000332": {
-    "razon_social": "DISTRIBUIDORA FLORENTINO S.R.L",
-    "archivo": "000332_DISTRIBUIDORA FLORENTINO S.R.L.pdf"
   },
   "000334": {
     "razon_social": "NEGRI RUBEN VICTOR",
@@ -1203,6 +1203,10 @@
     "razon_social": "CERDEIRA JORGE OMAR",
     "archivo": "000779_CERDEIRA JORGE OMAR.pdf"
   },
+  "000782": {
+    "razon_social": "BARSIMANTO BEATRIZ SUSANA",
+    "archivo": "000782_BARSIMANTO BEATRIZ SUSANA.pdf"
+  },
   "000783": {
     "razon_social": "POCHETTINO DRUETTA S.R.L.",
     "archivo": "000783_POCHETTINO DRUETTA S.R.L..pdf"
@@ -1515,6 +1519,10 @@
     "razon_social": "ALTAMIRANO HORACIO DANIEL",
     "archivo": "000906_ALTAMIRANO HORACIO DANIEL.pdf"
   },
+  "000908": {
+    "razon_social": "PAREDERO WALTER LUIS",
+    "archivo": "000908_PAREDERO WALTER LUIS.pdf"
+  },
   "000909": {
     "razon_social": "INDUSTRIAS FRIGORIFICAS NORTE",
     "archivo": "000909_INDUSTRIAS FRIGORIFICAS NORTE.pdf"
@@ -1594,6 +1602,10 @@
   "000935": {
     "razon_social": "GYZ JUDIMAR S.A.",
     "archivo": "000935_GYZ JUDIMAR S.A..pdf"
+  },
+  "000941": {
+    "razon_social": "ACUÑA ANDREA VERONICA",
+    "archivo": "000941_ACUÑA ANDREA VERONICA.pdf"
   },
   "000942": {
     "razon_social": "NOVELLI FRANCO MARTIN",
