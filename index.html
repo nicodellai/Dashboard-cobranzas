@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Dashboard - Evolución de Cobranzas</title>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
 <style>
 :root {
@@ -813,6 +814,8 @@ tr:hover {
     font-weight: 800;
     text-decoration: none;
     font-size: 12px;
+    font-family: inherit;
+    cursor: pointer;
 }
 
 .download-xlsx-button:hover {
@@ -1257,7 +1260,7 @@ tr:hover {
                     <th rowspan="2" class="summary-header">
                         <div class="header-title">Resumen de cuenta</div>
                     </th>
-                    <th colspan='3' class='week-group week-current'><div class='period-title'>Saldo actual</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$175.837.029,04</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$484.610.011,15</strong></div></div></th><th rowspan='2' class='week-group week-t1'><div class='period-title'>Saldo semana pasada</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$1.239.571.641,91</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$846.794.412,27</strong></div></div><div class='historical-balance'><div class='header-balance-label'>Saldo total</div><div class='header-balance-value'>$4.229.260.559,63</div></div></th><th rowspan='2' class='week-group week-t2'><div class='period-title'>Saldo hace dos semanas</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$712.088.250,15</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$727.433.115,73</strong></div></div><div class='historical-balance'><div class='header-balance-label'>Saldo total</div><div class='header-balance-value'>$3.823.783.374,74</div></div></th><th rowspan='2' class='week-group week-t3'><div class='period-title'>Saldo hace 3 semanas</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$-5.310.349,93</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$181.295.432,20</strong></div></div><div class='historical-balance'><div class='header-balance-label'>Saldo total</div><div class='header-balance-value'>$3.865.988.209,61</div></div></th><th rowspan='2' class='week-group week-t4'><div class='period-title'>Saldo hace un mes</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$460.780.951,07</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$543.873.154,15</strong></div></div><div class='historical-balance'><div class='header-balance-label'>Saldo total</div><div class='header-balance-value'>$4.060.035.067,13</div></div></th><th rowspan='2' class='week-group evolution-header'><div class='period-title'>Evolución semanal</div><div class='small-label'>Saldo actual vs semana pasada</div><div class='net-evolution net-down'><span class='net-arrow'>↓</span>$125.743.882,74</div></th><th rowspan='2' class='week-group evolution-header'><div class='period-title'>Evolución mensual</div><div class='small-label'>Saldo actual vs un mes atrás</div><div class='net-evolution net-up'><span class='net-arrow'>↑</span>$43.481.609,76</div></th>
+                    <th colspan='3' class='week-group week-current'><div class='period-title'>Saldo actual</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$175.837.029,04</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$484.806.524,62</strong></div></div></th><th rowspan='2' class='week-group week-t1'><div class='period-title'>Saldo semana pasada</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$1.239.571.641,91</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$846.794.412,27</strong></div></div><div class='historical-balance'><div class='header-balance-label'>Saldo total</div><div class='header-balance-value'>$4.229.260.559,63</div></div></th><th rowspan='2' class='week-group week-t2'><div class='period-title'>Saldo hace dos semanas</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$712.088.250,15</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$727.433.115,73</strong></div></div><div class='historical-balance'><div class='header-balance-label'>Saldo total</div><div class='header-balance-value'>$3.823.783.374,74</div></div></th><th rowspan='2' class='week-group week-t3'><div class='period-title'>Saldo hace 3 semanas</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$-5.310.349,93</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$181.295.432,20</strong></div></div><div class='historical-balance'><div class='header-balance-label'>Saldo total</div><div class='header-balance-value'>$3.865.988.209,61</div></div></th><th rowspan='2' class='week-group week-t4'><div class='period-title'>Saldo hace un mes</div><div class='period-flow'><div class='period-flow-row'><span>Facturado</span><strong>$460.780.951,07</strong></div><div class='period-flow-row'><span>Cobrado</span><strong>$543.873.154,15</strong></div></div><div class='historical-balance'><div class='header-balance-label'>Saldo total</div><div class='header-balance-value'>$4.060.035.067,13</div></div></th><th rowspan='2' class='week-group evolution-header'><div class='period-title'>Evolución semanal</div><div class='small-label'>Saldo actual vs semana pasada</div><div class='net-evolution net-down'><span class='net-arrow'>↓</span>$125.743.882,74</div></th><th rowspan='2' class='week-group evolution-header'><div class='period-title'>Evolución mensual</div><div class='small-label'>Saldo actual vs un mes atrás</div><div class='net-evolution net-up'><span class='net-arrow'>↑</span>$43.481.609,76</div></th>
                 </tr>
                 <tr>
                     <th class='current-subcol'><div class='subcol-name'>Vencido</div><div class='header-balance-value current-balance'>$1.736.647.688,04</div><select id='ordenTVencido' class='header-filter sort-filter' onchange="ordenarDeudaPor('vencido')"><option value=''>Ordenar</option><option value='desc'>Mayor a menor</option><option value='asc'>Menor a mayor</option></select></th><th class='current-subcol'><div class='subcol-name'>Vigente</div><div class='header-balance-value current-balance'>$2.366.868.988,85</div><select id='ordenTVigente' class='header-filter sort-filter' onchange="ordenarDeudaPor('vigente')"><option value=''>Ordenar</option><option value='desc'>Mayor a menor</option><option value='asc'>Menor a mayor</option></select></th><th class='current-subcol current-subcol-last'><div class='subcol-name'>Total</div><div class='header-balance-value current-balance'>$4.103.516.676,89</div><select id='ordenTTotal' class='header-filter sort-filter' onchange="ordenarDeudaPor('total')"><option value=''>Ordenar</option><option value='desc'>Mayor a menor</option><option value='asc'>Menor a mayor</option></select></th>
@@ -1286,9 +1289,13 @@ tr:hover {
 
     <div class="cobranzas-heading-row">
         <h2>Cobranzas</h2>
-        <a class="download-xlsx-button" href="./cobranzas.xlsx" download>
+        <button
+            type="button"
+            class="download-xlsx-button"
+            onclick="descargarCobrosFiltradosXLSX()"
+        >
             ↓ Descargar XLSX
-        </a>
+        </button>
     </div>
 
     <p>
@@ -1360,6 +1367,18 @@ tr:hover {
             <td></td>
             <td>29/09/2026</td>
             <td>SI</td>
+        </tr>
+        
+        <tr data-monto="28757.87">
+            <td>000869</td>
+            <td class="left">EL MINGO S.A.</td>
+            <td>Retención</td>
+            <td>07/09/2026</td>
+            <td class="num">$28.757,87</td>
+            <td class="left"></td>
+            <td></td>
+            <td>07/09/2026</td>
+            <td>NO</td>
         </tr>
         
         <tr data-monto="2000000.0">
@@ -2667,6 +2686,18 @@ tr:hover {
             <td class="left">BANCO DE GALICIA Y BUENOS AIRES S.A.U.</td>
             <td>00001091</td>
             <td>15/09/2026</td>
+            <td>NO</td>
+        </tr>
+        
+        <tr data-monto="167755.6">
+            <td>000213</td>
+            <td class="left">BASSANO SA</td>
+            <td>Retención</td>
+            <td>02/09/2026</td>
+            <td class="num">$167.755,60</td>
+            <td class="left"></td>
+            <td></td>
+            <td>02/09/2026</td>
             <td>NO</td>
         </tr>
         
@@ -71238,6 +71269,103 @@ function filtrarCobrosPorColumnas() {
 
         fila.style.display = visible ? "" : "none";
     });
+}
+
+
+function descargarCobrosFiltradosXLSX() {
+    if (typeof XLSX === "undefined") {
+        alert(
+            "No se pudo cargar el componente para generar Excel. " +
+            "Verificá tu conexión a Internet y volvé a intentarlo."
+        );
+        return;
+    }
+
+    const tabla = document.getElementById("tablaCobros");
+    if (!tabla) return;
+
+    const encabezados = [
+        "Código cliente",
+        "Razón social",
+        "Medio de pago",
+        "Fecha de cobranza",
+        "Monto",
+        "Banco emisor",
+        "Número de cheque",
+        "Fecha de pago",
+        "Recibo cargado en TANGO"
+    ];
+
+    const datos = [encabezados];
+
+    tabla.querySelectorAll("tbody tr").forEach(fila => {
+        // El filtro actual oculta las filas no coincidentes con display:none.
+        // Por lo tanto se exportan exactamente las filas visibles.
+        if (fila.style.display === "none") return;
+
+        const celdas = fila.querySelectorAll("td");
+        if (celdas.length < 9) return;
+
+        let monto = Number(fila.dataset.monto || 0);
+        if (!Number.isFinite(monto)) monto = 0;
+
+        datos.push([
+            (celdas[0].textContent || "").trim(),
+            (celdas[1].textContent || "").trim(),
+            (celdas[2].textContent || "").trim(),
+            (celdas[3].textContent || "").trim(),
+            monto,
+            (celdas[5].textContent || "").trim(),
+            (celdas[6].textContent || "").trim(),
+            (celdas[7].textContent || "").trim(),
+            (celdas[8].textContent || "").trim()
+        ]);
+    });
+
+    const hoja = XLSX.utils.aoa_to_sheet(datos);
+
+    // Autofiltro de Excel sobre todas las columnas exportadas.
+    const ultimaFila = Math.max(datos.length, 1);
+    hoja["!autofilter"] = {
+        ref: "A1:I" + ultimaFila
+    };
+
+    hoja["!cols"] = [
+        { wch: 15 },
+        { wch: 34 },
+        { wch: 18 },
+        { wch: 18 },
+        { wch: 18 },
+        { wch: 28 },
+        { wch: 20 },
+        { wch: 16 },
+        { wch: 24 }
+    ];
+
+    // Formato numérico de la columna Monto.
+    for (let fila = 2; fila <= ultimaFila; fila++) {
+        const celda = hoja["E" + fila];
+        if (celda && celda.t === "n") {
+            celda.z = '$ #,##0.00';
+        }
+    }
+
+    const libro = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(libro, hoja, "Cobranzas");
+
+    const ahora = new Date();
+    const pad = numero => String(numero).padStart(2, "0");
+    const nombre =
+        "cobranzas_filtradas_" +
+        ahora.getFullYear() +
+        pad(ahora.getMonth() + 1) +
+        pad(ahora.getDate()) +
+        "_" +
+        pad(ahora.getHours()) +
+        pad(ahora.getMinutes()) +
+        ".xlsx";
+
+    XLSX.writeFile(libro, nombre);
 }
 
 function seleccionarVendedor(vendedor, row) {
