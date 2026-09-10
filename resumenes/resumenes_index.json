@@ -691,17 +691,9 @@
     "razon_social": "CERDO ARGENTINO SA",
     "archivo": "000416_CERDO ARGENTINO SA.pdf"
   },
-  "000423": {
-    "razon_social": "GC ALIMENTOS EN PIE S.R.L",
-    "archivo": "000423_GC ALIMENTOS EN PIE S.R.L.pdf"
-  },
   "000426": {
     "razon_social": "ESTABLECIMIENTO SAN CAYETANO S",
     "archivo": "000426_ESTABLECIMIENTO SAN CAYETANO S.pdf"
-  },
-  "000430": {
-    "razon_social": "PORVACAGRI S.A.",
-    "archivo": "000430_PORVACAGRI S.A..pdf"
   },
   "000433": {
     "razon_social": "CARDINALI OSCAR LUIS",
@@ -718,10 +710,6 @@
   "000436": {
     "razon_social": "MARCONI GUILLERMO ALEJANDRO",
     "archivo": "000436_MARCONI GUILLERMO ALEJANDRO.pdf"
-  },
-  "000437": {
-    "razon_social": "RAMOEL SRL",
-    "archivo": "000437_RAMOEL SRL.pdf"
   },
   "000438": {
     "razon_social": "CARESANI MARIO JORGE",
@@ -742,10 +730,6 @@
   "000443": {
     "razon_social": "ESTABLECIMIENTO DON ADOLFO S.R",
     "archivo": "000443_ESTABLECIMIENTO DON ADOLFO S.R.pdf"
-  },
-  "000444": {
-    "razon_social": "IBERO TERRA SA",
-    "archivo": "000444_IBERO TERRA SA.pdf"
   },
   "000445": {
     "razon_social": "BENEDETTO ANTONIO JOSE",
@@ -806,10 +790,6 @@
   "000483": {
     "razon_social": "ARGUELLO GUSTAVO JOSE",
     "archivo": "000483_ARGUELLO GUSTAVO JOSE.pdf"
-  },
-  "000489": {
-    "razon_social": "FURLAN HNOS S.A.S.",
-    "archivo": "000489_FURLAN HNOS S.A.S..pdf"
   },
   "000495": {
     "razon_social": "PAMPA CENTRO SRL",
@@ -963,10 +943,6 @@
     "razon_social": "MONES RUIZ ALFONSO CARLOS",
     "archivo": "000637_MONES RUIZ ALFONSO CARLOS.pdf"
   },
-  "000638": {
-    "razon_social": "VIDAL CRISTINA SILVIA",
-    "archivo": "000638_VIDAL CRISTINA SILVIA.pdf"
-  },
   "000643": {
     "razon_social": "OTERO ZULMA MERCEDES",
     "archivo": "000643_OTERO ZULMA MERCEDES.pdf"
@@ -1042,10 +1018,6 @@
   "000704": {
     "razon_social": "PORCOMAGRO S R L",
     "archivo": "000704_PORCOMAGRO S R L.pdf"
-  },
-  "000708": {
-    "razon_social": "LA LAICA S.R.L.",
-    "archivo": "000708_LA LAICA S.R.L..pdf"
   },
   "000711": {
     "razon_social": "LOS 5 ASES S A",
@@ -1331,6 +1303,10 @@
     "razon_social": "LUZZI S.R.L.",
     "archivo": "000836_LUZZI S.R.L..pdf"
   },
+  "000837": {
+    "razon_social": "SANTA FEED S.R.L.",
+    "archivo": "000837_SANTA FEED S.R.L..pdf"
+  },
   "000838": {
     "razon_social": "BUFFA JORGE RAUL",
     "archivo": "000838_BUFFA JORGE RAUL.pdf"
@@ -1427,10 +1403,6 @@
     "razon_social": "PRITCHARD JORGE MARCELO",
     "archivo": "000877_PRITCHARD JORGE MARCELO.pdf"
   },
-  "000880": {
-    "razon_social": "LEÑO S A",
-    "archivo": "000880_LEÑO S A.pdf"
-  },
   "000885": {
     "razon_social": "ROBIN MARIANO MIGUEL",
     "archivo": "000885_ROBIN MARIANO MIGUEL.pdf"
@@ -1486,10 +1458,6 @@
   "000899": {
     "razon_social": "ACOSTA JULIO EDUARDO",
     "archivo": "000899_ACOSTA JULIO EDUARDO.pdf"
-  },
-  "000900": {
-    "razon_social": "PATAGONIA PORCINA S. A. S.",
-    "archivo": "000900_PATAGONIA PORCINA S. A. S..pdf"
   },
   "000901": {
     "razon_social": "MONTECITO S. A. S.",
@@ -1555,17 +1523,9 @@
     "razon_social": "COOP AGR DE MONTE MAIZ LTDA",
     "archivo": "000920_COOP AGR DE MONTE MAIZ LTDA.pdf"
   },
-  "000921": {
-    "razon_social": "NOVELLI JUAN JOSE",
-    "archivo": "000921_NOVELLI JUAN JOSE.pdf"
-  },
   "000925": {
     "razon_social": "ESTABLECIMIENTO DON GUILLERMO",
     "archivo": "000925_ESTABLECIMIENTO DON GUILLERMO.pdf"
-  },
-  "000926": {
-    "razon_social": "CALVENTE JOAQUIN RICARDO",
-    "archivo": "000926_CALVENTE JOAQUIN RICARDO.pdf"
   },
   "000927": {
     "razon_social": "GARCIA RICARDO ALFREDO",
@@ -1598,6 +1558,10 @@
   "000936": {
     "razon_social": "MADALU S. R. L.",
     "archivo": "000936_MADALU S. R. L..pdf"
+  },
+  "000938": {
+    "razon_social": "BOCCO PABLO JUAN",
+    "archivo": "000938_BOCCO PABLO JUAN.pdf"
   },
   "000941": {
     "razon_social": "ACUÑA ANDREA VERONICA",
