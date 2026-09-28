@@ -15,10 +15,6 @@
     "razon_social": "BELETTI CECIL RAMON",
     "archivo": "000005_BELETTI CECIL RAMON.pdf"
   },
-  "000006": {
-    "razon_social": "BELTRAMO SH",
-    "archivo": "000006_BELTRAMO SH.pdf"
-  },
   "000007": {
     "razon_social": "BERTELLO LUIS GASPAR E HIJOS -",
     "archivo": "000007_BERTELLO LUIS GASPAR E HIJOS -.pdf"
@@ -91,6 +87,10 @@
     "razon_social": "FOREZER SA",
     "archivo": "000035_FOREZER SA.pdf"
   },
+  "000036": {
+    "razon_social": "FUMISEM SA",
+    "archivo": "000036_FUMISEM SA.pdf"
+  },
   "000037": {
     "razon_social": "GARCIA HNOS SRL",
     "archivo": "000037_GARCIA HNOS SRL.pdf"
@@ -114,6 +114,10 @@
   "000047": {
     "razon_social": "KIPP ESTELA",
     "archivo": "000047_KIPP ESTELA.pdf"
+  },
+  "000048": {
+    "razon_social": "KOROVAICHUK OSCAR",
+    "archivo": "000048_KOROVAICHUK OSCAR.pdf"
   },
   "000050": {
     "razon_social": "LA ELVIRA SA",
@@ -215,10 +219,6 @@
     "razon_social": "AGROPECUARIA FONTANA SA",
     "archivo": "000090_AGROPECUARIA FONTANA SA.pdf"
   },
-  "000091": {
-    "razon_social": "SERVICIOS AGROPECUARIOS DE ENT",
-    "archivo": "000091_SERVICIOS AGROPECUARIOS DE ENT.pdf"
-  },
   "000092": {
     "razon_social": "DON SIFREDO SA",
     "archivo": "000092_DON SIFREDO SA.pdf"
@@ -254,10 +254,6 @@
   "000114": {
     "razon_social": "BOVETTI DANIEL",
     "archivo": "000114_BOVETTI DANIEL.pdf"
-  },
-  "000115": {
-    "razon_social": "GIOVANELLA MATIAS",
-    "archivo": "000115_GIOVANELLA MATIAS.pdf"
   },
   "000117": {
     "razon_social": "MEDINA, MARCELO FERNANDO",
@@ -310,10 +306,6 @@
   "000146": {
     "razon_social": "INSPECTORIA SALESIANA ARGENTIN",
     "archivo": "000146_INSPECTORIA SALESIANA ARGENTIN.pdf"
-  },
-  "000147": {
-    "razon_social": "KRANEVITTER MARIO OMAR",
-    "archivo": "000147_KRANEVITTER MARIO OMAR.pdf"
   },
   "000148": {
     "razon_social": "MORLINI ALEXIS",
@@ -395,17 +387,9 @@
     "razon_social": "CHACINADOS DEL NAON S.A.",
     "archivo": "000185_CHACINADOS DEL NAON S.A..pdf"
   },
-  "000187": {
-    "razon_social": "GONZALEZ FACUNDO DANIEL",
-    "archivo": "000187_GONZALEZ FACUNDO DANIEL.pdf"
-  },
   "000190": {
     "razon_social": "MARSO HNOS S.R.L.",
     "archivo": "000190_MARSO HNOS S.R.L..pdf"
-  },
-  "000193": {
-    "razon_social": "JUAN B. Y GERARDO J. PICCO S.A",
-    "archivo": "000193_JUAN B. Y GERARDO J. PICCO S.A.pdf"
   },
   "000196": {
     "razon_social": "CHIARIOTTI GUSTAVO CARLOS",
@@ -667,6 +651,10 @@
     "razon_social": "ESTABLECIMIENTO RURAL LOS ABUE",
     "archivo": "000388_ESTABLECIMIENTO RURAL LOS ABUE.pdf"
   },
+  "000393": {
+    "razon_social": "BRUSA DANTE JOSE",
+    "archivo": "000393_BRUSA DANTE JOSE.pdf"
+  },
   "000396": {
     "razon_social": "UNIVERSIDAD NACIONAL DE RIO CU",
     "archivo": "000396_UNIVERSIDAD NACIONAL DE RIO CU.pdf"
@@ -690,6 +678,10 @@
   "000416": {
     "razon_social": "CERDO ARGENTINO SA",
     "archivo": "000416_CERDO ARGENTINO SA.pdf"
+  },
+  "000423": {
+    "razon_social": "GC ALIMENTOS EN PIE S.R.L",
+    "archivo": "000423_GC ALIMENTOS EN PIE S.R.L.pdf"
   },
   "000426": {
     "razon_social": "ESTABLECIMIENTO SAN CAYETANO S",
@@ -723,9 +715,17 @@
     "razon_social": "ZARANTONELLI EDGARDO ARNALDO",
     "archivo": "000441_ZARANTONELLI EDGARDO ARNALDO.pdf"
   },
+  "000442": {
+    "razon_social": "TANZI JUAN MARTIN",
+    "archivo": "000442_TANZI JUAN MARTIN.pdf"
+  },
   "000443": {
     "razon_social": "ESTABLECIMIENTO DON ADOLFO S.R",
     "archivo": "000443_ESTABLECIMIENTO DON ADOLFO S.R.pdf"
+  },
+  "000444": {
+    "razon_social": "IBERO TERRA SA",
+    "archivo": "000444_IBERO TERRA SA.pdf"
   },
   "000445": {
     "razon_social": "BENEDETTO ANTONIO JOSE",
@@ -746,10 +746,6 @@
   "000456": {
     "razon_social": "STEFANO MARIO RAMON",
     "archivo": "000456_STEFANO MARIO RAMON.pdf"
-  },
-  "000458": {
-    "razon_social": "COBAL S.A.S.",
-    "archivo": "000458_COBAL S.A.S..pdf"
   },
   "000459": {
     "razon_social": "ALIMENTOS MAGROS S A",
@@ -887,6 +883,10 @@
     "razon_social": "LA PIARA SRL",
     "archivo": "000578_LA PIARA SRL.pdf"
   },
+  "000592": {
+    "razon_social": "AYALA JUAN EDUARDO",
+    "archivo": "000592_AYALA JUAN EDUARDO.pdf"
+  },
   "000594": {
     "razon_social": "LEAL BACILIO JOSE",
     "archivo": "000594_LEAL BACILIO JOSE.pdf"
@@ -894,6 +894,10 @@
   "000595": {
     "razon_social": "PARRA VICENTE ALFREDO EMIL",
     "archivo": "000595_PARRA VICENTE ALFREDO EMIL.pdf"
+  },
+  "000599": {
+    "razon_social": "CERDOS LA MACETA S. R. L.",
+    "archivo": "000599_CERDOS LA MACETA S. R. L..pdf"
   },
   "000601": {
     "razon_social": "GRANJAS DE BAVIO S.A.",
@@ -1003,10 +1007,6 @@
     "razon_social": "CERVERA SERGIO OSCAR",
     "archivo": "000692_CERVERA SERGIO OSCAR.pdf"
   },
-  "000694": {
-    "razon_social": "PAULUCCI SILVANA ESTER",
-    "archivo": "000694_PAULUCCI SILVANA ESTER.pdf"
-  },
   "000700": {
     "razon_social": "FAYFARA S.A.",
     "archivo": "000700_FAYFARA S.A..pdf"
@@ -1039,6 +1039,10 @@
     "razon_social": "AGROCARNES ARGENTINA S.A.",
     "archivo": "000725_AGROCARNES ARGENTINA S.A..pdf"
   },
+  "000726": {
+    "razon_social": "SALINAS JUAN ANTONIO",
+    "archivo": "000726_SALINAS JUAN ANTONIO.pdf"
+  },
   "000727": {
     "razon_social": "ESTABLECIMIENTO ANA MARIA SRL",
     "archivo": "000727_ESTABLECIMIENTO ANA MARIA SRL.pdf"
@@ -1070,6 +1074,10 @@
   "000737": {
     "razon_social": "MORENO MARIANO EDMUNDO",
     "archivo": "000737_MORENO MARIANO EDMUNDO.pdf"
+  },
+  "000739": {
+    "razon_social": "CRIADERO INTENSIVO S A",
+    "archivo": "000739_CRIADERO INTENSIVO S A.pdf"
   },
   "000745": {
     "razon_social": "AGUILERA EDUARDO SEBASTIAN",
@@ -1219,9 +1227,17 @@
     "razon_social": "ALBA RODRIGO EMMANUEL",
     "archivo": "000802_ALBA RODRIGO EMMANUEL.pdf"
   },
+  "000803": {
+    "razon_social": "OLEZZA NESTOR FABIAN",
+    "archivo": "000803_OLEZZA NESTOR FABIAN.pdf"
+  },
   "000808": {
     "razon_social": "ARROYO JOSE EMILIO",
     "archivo": "000808_ARROYO JOSE EMILIO.pdf"
+  },
+  "000809": {
+    "razon_social": "ASOCIACION CIVIL COLONIA JAIME",
+    "archivo": "000809_ASOCIACION CIVIL COLONIA JAIME.pdf"
   },
   "000810": {
     "razon_social": "RUSSO FAUSTINO",
@@ -1270,6 +1286,10 @@
   "000824": {
     "razon_social": "DOS HACHES DISTRIBUCIONES S.R.",
     "archivo": "000824_DOS HACHES DISTRIBUCIONES S.R..pdf"
+  },
+  "000827": {
+    "razon_social": "GOÑI RUBEN ALBERTO",
+    "archivo": "000827_GOÑI RUBEN ALBERTO.pdf"
   },
   "000828": {
     "razon_social": "HAUCKE RICARDO JOSE",
@@ -1394,6 +1414,10 @@
   "000877": {
     "razon_social": "PRITCHARD JORGE MARCELO",
     "archivo": "000877_PRITCHARD JORGE MARCELO.pdf"
+  },
+  "000880": {
+    "razon_social": "LEÑO S A",
+    "archivo": "000880_LEÑO S A.pdf"
   },
   "000885": {
     "razon_social": "ROBIN MARIANO MIGUEL",
@@ -1527,10 +1551,6 @@
     "razon_social": "GARCIA RICARDO ALFREDO",
     "archivo": "000927_GARCIA RICARDO ALFREDO.pdf"
   },
-  "000928": {
-    "razon_social": "CAPPELLETTI JOSE MARIA",
-    "archivo": "000928_CAPPELLETTI JOSE MARIA.pdf"
-  },
   "000929": {
     "razon_social": "LLOP JOEKES SEBASTIAN",
     "archivo": "000929_LLOP JOEKES SEBASTIAN.pdf"
@@ -1555,9 +1575,9 @@
     "razon_social": "GYZ JUDIMAR S.A.",
     "archivo": "000935_GYZ JUDIMAR S.A..pdf"
   },
-  "000941": {
-    "razon_social": "ACUÑA ANDREA VERONICA",
-    "archivo": "000941_ACUÑA ANDREA VERONICA.pdf"
+  "000936": {
+    "razon_social": "MADALU S. R. L.",
+    "archivo": "000936_MADALU S. R. L..pdf"
   },
   "000942": {
     "razon_social": "NOVELLI FRANCO MARTIN",
@@ -1590,9 +1610,5 @@
   "000949": {
     "razon_social": "SACCO CARLOS ESTEBAN",
     "archivo": "000949_SACCO CARLOS ESTEBAN.pdf"
-  },
-  "000951": {
-    "razon_social": "LOPEZ LUCRECIA DANIELA BARBARA",
-    "archivo": "000951_LOPEZ LUCRECIA DANIELA BARBARA.pdf"
   }
 }
