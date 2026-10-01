@@ -23,6 +23,10 @@
     "razon_social": "BRALU SA",
     "archivo": "000008_BRALU SA.pdf"
   },
+  "000009": {
+    "razon_social": "BREME HNOS SRL",
+    "archivo": "000009_BREME HNOS SRL.pdf"
+  },
   "000010": {
     "razon_social": "CARNES EL PICHON SA",
     "archivo": "000010_CARNES EL PICHON SA.pdf"
@@ -75,6 +79,10 @@
     "razon_social": "ESTANCIAS Y CABAÑA LAS LILAS S",
     "archivo": "000030_ESTANCIAS Y CABAÑA LAS LILAS S.pdf"
   },
+  "000031": {
+    "razon_social": "EZCURRA MIGUEL",
+    "archivo": "000031_EZCURRA MIGUEL.pdf"
+  },
   "000032": {
     "razon_social": "FADEL SA",
     "archivo": "000032_FADEL SA.pdf"
@@ -102,6 +110,10 @@
   "000040": {
     "razon_social": "GLERA SA",
     "archivo": "000040_GLERA SA.pdf"
+  },
+  "000041": {
+    "razon_social": "GRANJA DON ALFREDO SRL",
+    "archivo": "000041_GRANJA DON ALFREDO SRL.pdf"
   },
   "000044": {
     "razon_social": "GRANJA SAN EDUARDO SRL",
@@ -139,6 +151,10 @@
     "razon_social": "LOANS SA",
     "archivo": "000054_LOANS SA.pdf"
   },
+  "000056": {
+    "razon_social": "LOS TRES PALOS SA",
+    "archivo": "000056_LOS TRES PALOS SA.pdf"
+  },
   "000057": {
     "razon_social": "MIROLU S.A.",
     "archivo": "000057_MIROLU S.A..pdf"
@@ -146,6 +162,10 @@
   "000059": {
     "razon_social": "MONVALE CARLOS",
     "archivo": "000059_MONVALE CARLOS.pdf"
+  },
+  "000062": {
+    "razon_social": "R. Y D. PERLO S.R.L",
+    "archivo": "000062_R. Y D. PERLO S.R.L.pdf"
   },
   "000068": {
     "razon_social": "RAPOLA MARCOS",
@@ -218,6 +238,10 @@
   "000090": {
     "razon_social": "AGROPECUARIA FONTANA SA",
     "archivo": "000090_AGROPECUARIA FONTANA SA.pdf"
+  },
+  "000091": {
+    "razon_social": "SERVICIOS AGROPECUARIOS DE ENT",
+    "archivo": "000091_SERVICIOS AGROPECUARIOS DE ENT.pdf"
   },
   "000092": {
     "razon_social": "DON SIFREDO SA",
@@ -427,6 +451,10 @@
     "razon_social": "LAINATTI JULIAN ANDRES",
     "archivo": "000216_LAINATTI JULIAN ANDRES.pdf"
   },
+  "000223": {
+    "razon_social": "BARON REMIGIO ANGEL",
+    "archivo": "000223_BARON REMIGIO ANGEL.pdf"
+  },
   "000225": {
     "razon_social": "LARCE S.R.L.",
     "archivo": "000225_LARCE S.R.L..pdf"
@@ -482,10 +510,6 @@
   "000259": {
     "razon_social": "SEPOR SA",
     "archivo": "000259_SEPOR SA.pdf"
-  },
-  "000262": {
-    "razon_social": "CAMPO AUSTRAL SA",
-    "archivo": "000262_CAMPO AUSTRAL SA.pdf"
   },
   "000266": {
     "razon_social": "EL VIEJO PASTOR SRL",
@@ -583,6 +607,10 @@
     "razon_social": "BENEDETTO JAIME MANUEL",
     "archivo": "000345_BENEDETTO JAIME MANUEL.pdf"
   },
+  "000347": {
+    "razon_social": "CANE FERNANDO DANIEL",
+    "archivo": "000347_CANE FERNANDO DANIEL.pdf"
+  },
   "000348": {
     "razon_social": "COSTA RIO S.R.L.",
     "archivo": "000348_COSTA RIO S.R.L..pdf"
@@ -679,10 +707,6 @@
     "razon_social": "CERDO ARGENTINO SA",
     "archivo": "000416_CERDO ARGENTINO SA.pdf"
   },
-  "000423": {
-    "razon_social": "GC ALIMENTOS EN PIE S.R.L",
-    "archivo": "000423_GC ALIMENTOS EN PIE S.R.L.pdf"
-  },
   "000426": {
     "razon_social": "ESTABLECIMIENTO SAN CAYETANO S",
     "archivo": "000426_ESTABLECIMIENTO SAN CAYETANO S.pdf"
@@ -715,10 +739,6 @@
     "razon_social": "ZARANTONELLI EDGARDO ARNALDO",
     "archivo": "000441_ZARANTONELLI EDGARDO ARNALDO.pdf"
   },
-  "000442": {
-    "razon_social": "TANZI JUAN MARTIN",
-    "archivo": "000442_TANZI JUAN MARTIN.pdf"
-  },
   "000443": {
     "razon_social": "ESTABLECIMIENTO DON ADOLFO S.R",
     "archivo": "000443_ESTABLECIMIENTO DON ADOLFO S.R.pdf"
@@ -746,6 +766,10 @@
   "000456": {
     "razon_social": "STEFANO MARIO RAMON",
     "archivo": "000456_STEFANO MARIO RAMON.pdf"
+  },
+  "000458": {
+    "razon_social": "COBAL S.A.S.",
+    "archivo": "000458_COBAL S.A.S..pdf"
   },
   "000459": {
     "razon_social": "ALIMENTOS MAGROS S A",
@@ -930,10 +954,6 @@
   "000633": {
     "razon_social": "LA INESITA PIG S.R.L.",
     "archivo": "000633_LA INESITA PIG S.R.L..pdf"
-  },
-  "000635": {
-    "razon_social": "SOUTH SEEDS S.A.",
-    "archivo": "000635_SOUTH SEEDS S.A..pdf"
   },
   "000637": {
     "razon_social": "MONES RUIZ ALFONSO CARLOS",
@@ -1127,6 +1147,10 @@
     "razon_social": "GUILLEN JUAN MIGUEL",
     "archivo": "000759_GUILLEN JUAN MIGUEL.pdf"
   },
+  "000763": {
+    "razon_social": "LUCIANI NEGOCIOS AGROPECUARIOS",
+    "archivo": "000763_LUCIANI NEGOCIOS AGROPECUARIOS.pdf"
+  },
   "000764": {
     "razon_social": "DI RICO ALFREDO",
     "archivo": "000764_DI RICO ALFREDO.pdf"
@@ -1190,10 +1214,6 @@
   "000787": {
     "razon_social": "PEPE ANNIBALI S.A.",
     "archivo": "000787_PEPE ANNIBALI S.A..pdf"
-  },
-  "000788": {
-    "razon_social": "AGROGANADERA LOS TILOS S.R.L.",
-    "archivo": "000788_AGROGANADERA LOS TILOS S.R.L..pdf"
   },
   "000789": {
     "razon_social": "SAN JUAN DE TOTORAL S A",
@@ -1415,10 +1435,6 @@
     "razon_social": "PRITCHARD JORGE MARCELO",
     "archivo": "000877_PRITCHARD JORGE MARCELO.pdf"
   },
-  "000880": {
-    "razon_social": "LEÑO S A",
-    "archivo": "000880_LEÑO S A.pdf"
-  },
   "000885": {
     "razon_social": "ROBIN MARIANO MIGUEL",
     "archivo": "000885_ROBIN MARIANO MIGUEL.pdf"
@@ -1547,6 +1563,10 @@
     "razon_social": "ESTABLECIMIENTO DON GUILLERMO",
     "archivo": "000925_ESTABLECIMIENTO DON GUILLERMO.pdf"
   },
+  "000926": {
+    "razon_social": "CALVENTE JOAQUIN RICARDO",
+    "archivo": "000926_CALVENTE JOAQUIN RICARDO.pdf"
+  },
   "000927": {
     "razon_social": "GARCIA RICARDO ALFREDO",
     "archivo": "000927_GARCIA RICARDO ALFREDO.pdf"
@@ -1578,6 +1598,10 @@
   "000936": {
     "razon_social": "MADALU S. R. L.",
     "archivo": "000936_MADALU S. R. L..pdf"
+  },
+  "000938": {
+    "razon_social": "BOCCO PABLO JUAN",
+    "archivo": "000938_BOCCO PABLO JUAN.pdf"
   },
   "000942": {
     "razon_social": "NOVELLI FRANCO MARTIN",
