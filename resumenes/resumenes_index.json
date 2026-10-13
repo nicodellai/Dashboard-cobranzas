@@ -107,10 +107,6 @@
     "razon_social": "GLERA SA",
     "archivo": "000040_GLERA SA.pdf"
   },
-  "000041": {
-    "razon_social": "GRANJA DON ALFREDO SRL",
-    "archivo": "000041_GRANJA DON ALFREDO SRL.pdf"
-  },
   "000044": {
     "razon_social": "GRANJA SAN EDUARDO SRL",
     "archivo": "000044_GRANJA SAN EDUARDO SRL.pdf"
@@ -122,10 +118,6 @@
   "000047": {
     "razon_social": "KIPP ESTELA",
     "archivo": "000047_KIPP ESTELA.pdf"
-  },
-  "000048": {
-    "razon_social": "KOROVAICHUK OSCAR",
-    "archivo": "000048_KOROVAICHUK OSCAR.pdf"
   },
   "000050": {
     "razon_social": "LA ELVIRA SA",
@@ -154,10 +146,6 @@
   "000059": {
     "razon_social": "MONVALE CARLOS",
     "archivo": "000059_MONVALE CARLOS.pdf"
-  },
-  "000062": {
-    "razon_social": "R. Y D. PERLO S.R.L",
-    "archivo": "000062_R. Y D. PERLO S.R.L.pdf"
   },
   "000064": {
     "razon_social": "PIEMONTE SRL",
@@ -255,6 +243,10 @@
     "razon_social": "ALDAZABAL MAS SA",
     "archivo": "000099_ALDAZABAL MAS SA.pdf"
   },
+  "000102": {
+    "razon_social": "PIATTI RICARDO LUIS",
+    "archivo": "000102_PIATTI RICARDO LUIS.pdf"
+  },
   "000105": {
     "razon_social": "GREEN PORK SA",
     "archivo": "000105_GREEN PORK SA.pdf"
@@ -287,25 +279,13 @@
     "razon_social": "LA LAGUNITA SA",
     "archivo": "000130_LA LAGUNITA SA.pdf"
   },
-  "000132": {
-    "razon_social": "FUNDACION SAN LUIS ORIONE",
-    "archivo": "000132_FUNDACION SAN LUIS ORIONE.pdf"
-  },
   "000134": {
     "razon_social": "SCORTTI SEBASTIAN IGNACIO",
     "archivo": "000134_SCORTTI SEBASTIAN IGNACIO.pdf"
   },
-  "000135": {
-    "razon_social": "NOVO SRL",
-    "archivo": "000135_NOVO SRL.pdf"
-  },
   "000136": {
     "razon_social": "AGRO TABORRA SRL",
     "archivo": "000136_AGRO TABORRA SRL.pdf"
-  },
-  "000139": {
-    "razon_social": "CAPPELARI VICTOR NELSON",
-    "archivo": "000139_CAPPELARI VICTOR NELSON.pdf"
   },
   "000142": {
     "razon_social": "EDUVIPA SA",
@@ -367,10 +347,6 @@
     "razon_social": "ESTABLECIMIENTO BAJO CERO SA",
     "archivo": "000170_ESTABLECIMIENTO BAJO CERO SA.pdf"
   },
-  "000171": {
-    "razon_social": "COSCIA JESUS ALEJANDRO",
-    "archivo": "000171_COSCIA JESUS ALEJANDRO.pdf"
-  },
   "000173": {
     "razon_social": "COSTANTINI LUIS IGNACIO",
     "archivo": "000173_COSTANTINI LUIS IGNACIO.pdf"
@@ -407,6 +383,10 @@
     "razon_social": "MARSO HNOS S.R.L.",
     "archivo": "000190_MARSO HNOS S.R.L..pdf"
   },
+  "000193": {
+    "razon_social": "JUAN B. Y GERARDO J. PICCO S.A",
+    "archivo": "000193_JUAN B. Y GERARDO J. PICCO S.A.pdf"
+  },
   "000196": {
     "razon_social": "CHIARIOTTI GUSTAVO CARLOS",
     "archivo": "000196_CHIARIOTTI GUSTAVO CARLOS.pdf"
@@ -418,10 +398,6 @@
   "000204": {
     "razon_social": "E. Y A. RODRIGUEZ S.R.L.",
     "archivo": "000204_E. Y A. RODRIGUEZ S.R.L..pdf"
-  },
-  "000205": {
-    "razon_social": "RAPOLA MARTIN GABRIEL",
-    "archivo": "000205_RAPOLA MARTIN GABRIEL.pdf"
   },
   "000208": {
     "razon_social": "ESTABLECIMIENTO VIDA S.H",
@@ -739,10 +715,6 @@
     "razon_social": "BUIRAS FRANCO",
     "archivo": "000439_BUIRAS FRANCO.pdf"
   },
-  "000441": {
-    "razon_social": "ZARANTONELLI EDGARDO ARNALDO",
-    "archivo": "000441_ZARANTONELLI EDGARDO ARNALDO.pdf"
-  },
   "000443": {
     "razon_social": "ESTABLECIMIENTO DON ADOLFO S.R",
     "archivo": "000443_ESTABLECIMIENTO DON ADOLFO S.R.pdf"
@@ -846,6 +818,10 @@
   "000525": {
     "razon_social": "PORTA HEBER FLAVIO",
     "archivo": "000525_PORTA HEBER FLAVIO.pdf"
+  },
+  "000527": {
+    "razon_social": "ROMERO WALDO ALBERTO",
+    "archivo": "000527_ROMERO WALDO ALBERTO.pdf"
   },
   "000529": {
     "razon_social": "ZAYAS LELIS VLADIMIR",
@@ -955,6 +931,10 @@
     "razon_social": "LA INESITA PIG S.R.L.",
     "archivo": "000633_LA INESITA PIG S.R.L..pdf"
   },
+  "000635": {
+    "razon_social": "SOUTH SEEDS S.A.",
+    "archivo": "000635_SOUTH SEEDS S.A..pdf"
+  },
   "000637": {
     "razon_social": "MONES RUIZ ALFONSO CARLOS",
     "archivo": "000637_MONES RUIZ ALFONSO CARLOS.pdf"
@@ -1059,10 +1039,6 @@
     "razon_social": "AGROCARNES ARGENTINA S.A.",
     "archivo": "000725_AGROCARNES ARGENTINA S.A..pdf"
   },
-  "000726": {
-    "razon_social": "SALINAS JUAN ANTONIO",
-    "archivo": "000726_SALINAS JUAN ANTONIO.pdf"
-  },
   "000727": {
     "razon_social": "ESTABLECIMIENTO ANA MARIA SRL",
     "archivo": "000727_ESTABLECIMIENTO ANA MARIA SRL.pdf"
@@ -1094,10 +1070,6 @@
   "000737": {
     "razon_social": "MORENO MARIANO EDMUNDO",
     "archivo": "000737_MORENO MARIANO EDMUNDO.pdf"
-  },
-  "000739": {
-    "razon_social": "CRIADERO INTENSIVO S A",
-    "archivo": "000739_CRIADERO INTENSIVO S A.pdf"
   },
   "000745": {
     "razon_social": "AGUILERA EDUARDO SEBASTIAN",
@@ -1154,10 +1126,6 @@
   "000764": {
     "razon_social": "DI RICO ALFREDO",
     "archivo": "000764_DI RICO ALFREDO.pdf"
-  },
-  "000766": {
-    "razon_social": "BOURDET JUAN PEDRO",
-    "archivo": "000766_BOURDET JUAN PEDRO.pdf"
   },
   "000767": {
     "razon_social": "CERDO DE LOS LLANOS S.A.U",
@@ -1299,17 +1267,9 @@
     "razon_social": "RAMIRO EZEQUIEL",
     "archivo": "000820_RAMIRO EZEQUIEL.pdf"
   },
-  "000821": {
-    "razon_social": "SANCHEZ VIAMONTE PATRICIO",
-    "archivo": "000821_SANCHEZ VIAMONTE PATRICIO.pdf"
-  },
   "000823": {
     "razon_social": "NORTH TRADING SOLUTIONS SRL",
     "archivo": "000823_NORTH TRADING SOLUTIONS SRL.pdf"
-  },
-  "000827": {
-    "razon_social": "GOÑI RUBEN ALBERTO",
-    "archivo": "000827_GOÑI RUBEN ALBERTO.pdf"
   },
   "000828": {
     "razon_social": "HAUCKE RICARDO JOSE",
@@ -1599,10 +1559,6 @@
     "razon_social": "GYZ JUDIMAR S.A.",
     "archivo": "000935_GYZ JUDIMAR S.A..pdf"
   },
-  "000936": {
-    "razon_social": "MADALU S. R. L.",
-    "archivo": "000936_MADALU S. R. L..pdf"
-  },
   "000941": {
     "razon_social": "ACUÑA ANDREA VERONICA",
     "archivo": "000941_ACUÑA ANDREA VERONICA.pdf"
@@ -1610,10 +1566,6 @@
   "000942": {
     "razon_social": "NOVELLI FRANCO MARTIN",
     "archivo": "000942_NOVELLI FRANCO MARTIN.pdf"
-  },
-  "000943": {
-    "razon_social": "BERTONE OSVALDO DOMINGO Y BERT",
-    "archivo": "000943_BERTONE OSVALDO DOMINGO Y BERT.pdf"
   },
   "000944": {
     "razon_social": "TORRES USTARES MARCIA ARIANA",
