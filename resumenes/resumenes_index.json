@@ -231,10 +231,6 @@
     "razon_social": "DON SIFREDO SA",
     "archivo": "000092_DON SIFREDO SA.pdf"
   },
-  "000097": {
-    "razon_social": "CERCA SRL",
-    "archivo": "000097_CERCA SRL.pdf"
-  },
   "000098": {
     "razon_social": "PETKUN JUAN PEDRO",
     "archivo": "000098_PETKUN JUAN PEDRO.pdf"
@@ -883,10 +879,6 @@
     "razon_social": "LA PIARA SRL",
     "archivo": "000578_LA PIARA SRL.pdf"
   },
-  "000592": {
-    "razon_social": "AYALA JUAN EDUARDO",
-    "archivo": "000592_AYALA JUAN EDUARDO.pdf"
-  },
   "000594": {
     "razon_social": "LEAL BACILIO JOSE",
     "archivo": "000594_LEAL BACILIO JOSE.pdf"
@@ -1186,6 +1178,10 @@
   "000787": {
     "razon_social": "PEPE ANNIBALI S.A.",
     "archivo": "000787_PEPE ANNIBALI S.A..pdf"
+  },
+  "000788": {
+    "razon_social": "AGROGANADERA LOS TILOS S.R.L.",
+    "archivo": "000788_AGROGANADERA LOS TILOS S.R.L..pdf"
   },
   "000789": {
     "razon_social": "SAN JUAN DE TOTORAL S A",
