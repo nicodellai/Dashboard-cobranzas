@@ -123,6 +123,10 @@
     "razon_social": "KIPP ESTELA",
     "archivo": "000047_KIPP ESTELA.pdf"
   },
+  "000048": {
+    "razon_social": "KOROVAICHUK OSCAR",
+    "archivo": "000048_KOROVAICHUK OSCAR.pdf"
+  },
   "000050": {
     "razon_social": "LA ELVIRA SA",
     "archivo": "000050_LA ELVIRA SA.pdf"
@@ -238,10 +242,6 @@
   "000098": {
     "razon_social": "PETKUN JUAN PEDRO",
     "archivo": "000098_PETKUN JUAN PEDRO.pdf"
-  },
-  "000099": {
-    "razon_social": "ALDAZABAL MAS SA",
-    "archivo": "000099_ALDAZABAL MAS SA.pdf"
   },
   "000102": {
     "razon_social": "PIATTI RICARDO LUIS",
@@ -547,10 +547,6 @@
     "razon_social": "ROBOL NESTOR DANIEL",
     "archivo": "000319_ROBOL NESTOR DANIEL.pdf"
   },
-  "000320": {
-    "razon_social": "CATTELAN JOSE LUIS",
-    "archivo": "000320_CATTELAN JOSE LUIS.pdf"
-  },
   "000324": {
     "razon_social": "REBOTTARO SANTIAGO JAVIER",
     "archivo": "000324_REBOTTARO SANTIAGO JAVIER.pdf"
@@ -718,6 +714,10 @@
   "000436": {
     "razon_social": "MARCONI GUILLERMO ALEJANDRO",
     "archivo": "000436_MARCONI GUILLERMO ALEJANDRO.pdf"
+  },
+  "000437": {
+    "razon_social": "RAMOEL SRL",
+    "archivo": "000437_RAMOEL SRL.pdf"
   },
   "000438": {
     "razon_social": "CARESANI MARIO JORGE",
@@ -903,10 +903,6 @@
     "razon_social": "PARRA VICENTE ALFREDO EMIL",
     "archivo": "000595_PARRA VICENTE ALFREDO EMIL.pdf"
   },
-  "000599": {
-    "razon_social": "CERDOS LA MACETA S. R. L.",
-    "archivo": "000599_CERDOS LA MACETA S. R. L..pdf"
-  },
   "000601": {
     "razon_social": "GRANJAS DE BAVIO S.A.",
     "archivo": "000601_GRANJAS DE BAVIO S.A..pdf"
@@ -1046,6 +1042,10 @@
   "000725": {
     "razon_social": "AGROCARNES ARGENTINA S.A.",
     "archivo": "000725_AGROCARNES ARGENTINA S.A..pdf"
+  },
+  "000726": {
+    "razon_social": "SALINAS JUAN ANTONIO",
+    "archivo": "000726_SALINAS JUAN ANTONIO.pdf"
   },
   "000727": {
     "razon_social": "ESTABLECIMIENTO ANA MARIA SRL",
@@ -1243,10 +1243,6 @@
     "razon_social": "ARROYO JOSE EMILIO",
     "archivo": "000808_ARROYO JOSE EMILIO.pdf"
   },
-  "000809": {
-    "razon_social": "ASOCIACION CIVIL COLONIA JAIME",
-    "archivo": "000809_ASOCIACION CIVIL COLONIA JAIME.pdf"
-  },
   "000810": {
     "razon_social": "RUSSO FAUSTINO",
     "archivo": "000810_RUSSO FAUSTINO.pdf"
@@ -1279,6 +1275,10 @@
     "razon_social": "RAMIRO EZEQUIEL",
     "archivo": "000820_RAMIRO EZEQUIEL.pdf"
   },
+  "000821": {
+    "razon_social": "SANCHEZ VIAMONTE PATRICIO",
+    "archivo": "000821_SANCHEZ VIAMONTE PATRICIO.pdf"
+  },
   "000823": {
     "razon_social": "NORTH TRADING SOLUTIONS SRL",
     "archivo": "000823_NORTH TRADING SOLUTIONS SRL.pdf"
@@ -1286,6 +1286,10 @@
   "000824": {
     "razon_social": "DOS HACHES DISTRIBUCIONES S.R.",
     "archivo": "000824_DOS HACHES DISTRIBUCIONES S.R..pdf"
+  },
+  "000827": {
+    "razon_social": "GOÑI RUBEN ALBERTO",
+    "archivo": "000827_GOÑI RUBEN ALBERTO.pdf"
   },
   "000828": {
     "razon_social": "HAUCKE RICARDO JOSE",
