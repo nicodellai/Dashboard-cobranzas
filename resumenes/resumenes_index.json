@@ -259,6 +259,10 @@
     "razon_social": "BONINO, CARLOS EDUARDO",
     "archivo": "000112_BONINO, CARLOS EDUARDO.pdf"
   },
+  "000114": {
+    "razon_social": "BOVETTI DANIEL",
+    "archivo": "000114_BOVETTI DANIEL.pdf"
+  },
   "000117": {
     "razon_social": "MEDINA, MARCELO FERNANDO",
     "archivo": "000117_MEDINA, MARCELO FERNANDO.pdf"
@@ -286,6 +290,10 @@
   "000134": {
     "razon_social": "SCORTTI SEBASTIAN IGNACIO",
     "archivo": "000134_SCORTTI SEBASTIAN IGNACIO.pdf"
+  },
+  "000135": {
+    "razon_social": "NOVO SRL",
+    "archivo": "000135_NOVO SRL.pdf"
   },
   "000136": {
     "razon_social": "AGRO TABORRA SRL",
@@ -727,6 +735,10 @@
     "razon_social": "BUIRAS FRANCO",
     "archivo": "000439_BUIRAS FRANCO.pdf"
   },
+  "000442": {
+    "razon_social": "TANZI JUAN MARTIN",
+    "archivo": "000442_TANZI JUAN MARTIN.pdf"
+  },
   "000443": {
     "razon_social": "ESTABLECIMIENTO DON ADOLFO S.R",
     "archivo": "000443_ESTABLECIMIENTO DON ADOLFO S.R.pdf"
@@ -1167,10 +1179,6 @@
     "razon_social": "ARGUELLO AGUSTIN MATIAS, ARGUE",
     "archivo": "000775_ARGUELLO AGUSTIN MATIAS, ARGUE.pdf"
   },
-  "000777": {
-    "razon_social": "LURASCHI JUAN  CRUZ",
-    "archivo": "000777_LURASCHI JUAN CRUZ.pdf"
-  },
   "000778": {
     "razon_social": "EL GOYO S.A.",
     "archivo": "000778_EL GOYO S.A..pdf"
@@ -1523,10 +1531,6 @@
     "razon_social": "EL NUEVO CERDO S.R.L.",
     "archivo": "000916_EL NUEVO CERDO S.R.L..pdf"
   },
-  "000917": {
-    "razon_social": "LOS NEGRITOS S.R.L.",
-    "archivo": "000917_LOS NEGRITOS S.R.L..pdf"
-  },
   "000918": {
     "razon_social": "NAPREDAK S. R. L.",
     "archivo": "000918_NAPREDAK S. R. L..pdf"
@@ -1618,5 +1622,9 @@
   "000954": {
     "razon_social": "BAHIA CRISTIAN FABIAN",
     "archivo": "000954_BAHIA CRISTIAN FABIAN.pdf"
+  },
+  "000957": {
+    "razon_social": "EL CAMILO S. R. L.",
+    "archivo": "000957_EL CAMILO S. R. L..pdf"
   }
 }
