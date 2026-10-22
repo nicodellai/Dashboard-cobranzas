@@ -178,6 +178,9 @@ main {
     max-height: 650px;
     border: 1px solid var(--line);
     border-radius: 12px;
+    position: relative;
+    isolation: isolate;
+    background: white;
 }
 
 table {
@@ -197,10 +200,28 @@ th {
 }
 
 #tablaResumenDeuda thead {
-    position: sticky;
-    top: 0;
-    z-index: 12;
     background: #e8eef8;
+}
+
+#tablaResumenDeuda thead th {
+    position: sticky;
+    background: #e8eef8;
+    z-index: 30;
+}
+
+#tablaResumenDeuda thead tr:first-child th {
+    top: 0;
+    z-index: 32;
+}
+
+#tablaResumenDeuda thead tr:nth-child(2) th {
+    top: 72px;
+    z-index: 31;
+}
+
+#tablaResumenDeuda thead tr:first-child th[rowspan="2"] {
+    top: 0;
+    z-index: 33;
 }
 
 #tablaResumenDeuda thead tr:last-child th {
@@ -413,7 +434,7 @@ tr:hover {
 
 #tablaResumenDeuda tbody td {
     position: relative;
-    z-index: 1;
+    z-index: auto;
 }
 
 #tablaResumenDeuda .code-header,
@@ -446,9 +467,9 @@ tr:hover {
 
 #tablaResumenDeuda .summary-header,
 #tablaResumenDeuda td:nth-child(4) {
-    width: 128px;
-    min-width: 128px;
-    max-width: 128px;
+    width: 172px;
+    min-width: 172px;
+    max-width: 172px;
 }
 
 #tablaResumenDeuda .summary-header {
@@ -1559,6 +1580,9 @@ tr:hover {
     align-items: center;
     justify-content: center;
     gap: 8px;
+    width: 100%;
+    min-width: 0;
+    padding: 0 3px;
 }
 
 .whatsapp-basket-button {
