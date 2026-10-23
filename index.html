@@ -201171,8 +201171,8 @@ async function copiarDetalleCliente() {
 
 
 const RESUMEN_CANASTO_KEY = "dashboardResumenesWhatsAppCanastoV1";
-const WHATSAPP_LOCAL_BASE = "http://127.0.0.1:8773";
-const WHATSAPP_EXPECTED_VERSION = "V15-BOTON-VERDE-2026-10-23";
+const WHATSAPP_LOCAL_BASE = "http://127.0.0.1:8774";
+const WHATSAPP_EXPECTED_VERSION = "V16-COORDENADAS-PREVIEW-2026-10-23";
 const WHATSAPP_LOCAL_URL = WHATSAPP_LOCAL_BASE + "/enviar";
 
 function leerCanastoResumenes() {
@@ -201304,10 +201304,12 @@ async function enviarResumenesCanasto() {
                 guardarCanastoResumenes(restante);
 
                 if (errores > 0) {
+                    const detalleError = String(r.detalle_error || "");
                     estado.textContent =
                         "Enviados: " + enviados +
                         ". Omitidos: " + omitidos +
                         ". Con error: " + errores +
+                        (detalleError ? ". Error: " + detalleError : "") +
                         ". Los que fallaron siguen en el carrito.";
                 } else {
                     estado.textContent =
