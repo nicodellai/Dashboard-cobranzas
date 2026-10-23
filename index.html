@@ -1609,6 +1609,197 @@ tr:hover {
     color: #fff;
     box-shadow: 0 0 0 2px rgba(37,211,102,.18);
 }
+
+.summary-basket-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, .58);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 10050;
+}
+
+.summary-basket-overlay.open {
+    display: flex;
+}
+
+.summary-basket-modal {
+    width: min(920px, 96vw);
+    max-height: 88vh;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 24px 70px rgba(15,23,42,.28);
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-basket-modal-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 20px 22px 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.summary-basket-modal-header h2 {
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+
+.summary-basket-modal-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.summary-basket-close {
+    border: 0;
+    background: #f1f5f9;
+    color: #334155;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.summary-basket-help {
+    margin: 14px 22px 4px;
+    padding: 11px 13px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+    color: #166534;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.summary-basket-manual-list {
+    overflow: auto;
+    padding: 12px 22px 20px;
+}
+
+.summary-manual-empty {
+    padding: 30px;
+    text-align: center;
+    color: #64748b;
+}
+
+.summary-manual-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) auto;
+    gap: 14px;
+    align-items: center;
+}
+
+.summary-manual-client {
+    min-width: 0;
+}
+
+.summary-manual-client strong {
+    display: block;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.summary-manual-meta {
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.45;
+}
+
+.summary-manual-phone-bad {
+    color: #b91c1c;
+    font-weight: 700;
+}
+
+.summary-manual-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.summary-manual-primary,
+.summary-manual-secondary,
+.summary-manual-sent {
+    border-radius: 9px;
+    padding: 8px 11px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.summary-manual-primary {
+    border: 1px solid #128c7e;
+    background: #25d366;
+    color: #073c35;
+}
+
+.summary-manual-primary:disabled {
+    cursor: not-allowed;
+    opacity: .45;
+}
+
+.summary-manual-secondary {
+    border: 1px solid #cbd5e1;
+    background: #fff;
+    color: #334155;
+}
+
+.summary-manual-sent {
+    border: 1px solid #94a3b8;
+    background: #f8fafc;
+    color: #334155;
+}
+
+.summary-basket-modal-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 14px 22px;
+    border-top: 1px solid #e5e7eb;
+    background: #f8fafc;
+}
+
+.summary-basket-clear,
+.summary-basket-done {
+    border-radius: 9px;
+    padding: 8px 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.summary-basket-clear {
+    border: 1px solid #fecaca;
+    background: #fff;
+    color: #b91c1c;
+}
+
+.summary-basket-done {
+    border: 1px solid #cbd5e1;
+    background: #fff;
+    color: #334155;
+}
+
+@media (max-width: 720px) {
+    .summary-manual-item {
+        grid-template-columns: 1fr;
+    }
+    .summary-manual-actions {
+        justify-content: flex-start;
+    }
+}
 </style>
 </head>
 
@@ -1621,11 +1812,34 @@ tr:hover {
 
 <main>
 <div class="whatsapp-topbar">
-    <button type="button" id="sendSummariesButton" class="send-summaries-button" onclick="enviarResumenesCanasto()">
-        Enviar resúmenes
+    <button type="button" id="sendSummariesButton" class="send-summaries-button" onclick="abrirPreparadorResumenes()">
+        Preparar envíos
         <span id="summaryBasketCount" class="summary-basket-count">0</span>
     </button>
     <span id="summaryBasketStatus" class="summary-basket-status"></span>
+</div>
+
+<div id="summaryBasketOverlay" class="summary-basket-overlay" aria-hidden="true">
+    <div class="summary-basket-modal" role="dialog" aria-modal="true" aria-labelledby="summaryBasketTitle">
+        <div class="summary-basket-modal-header">
+            <div>
+                <h2 id="summaryBasketTitle">Preparar resúmenes por WhatsApp</h2>
+                <p>El mensaje se abre listo en WhatsApp. La ruta del PDF se copia automáticamente para pegarla al adjuntar un Documento.</p>
+            </div>
+            <button type="button" class="summary-basket-close" onclick="cerrarPreparadorResumenes()" aria-label="Cerrar">×</button>
+        </div>
+
+        <div class="summary-basket-help">
+            <strong>Flujo:</strong> Preparar envío → en WhatsApp, Adjuntar → Documento → pegá la ruta con Ctrl+V → Enviar → volvé acá y marcá Enviado.
+        </div>
+
+        <div id="summaryBasketManualList" class="summary-basket-manual-list"></div>
+
+        <div class="summary-basket-modal-footer">
+            <button type="button" class="summary-basket-clear" onclick="vaciarCanastoResumenes()">Vaciar carrito</button>
+            <button type="button" class="summary-basket-done" onclick="cerrarPreparadorResumenes()">Cerrar</button>
+        </div>
+    </div>
 </div>
 
 <div class="tabs">
@@ -201183,9 +201397,6 @@ async function copiarDetalleCliente() {
 
 
 const RESUMEN_CANASTO_KEY = "dashboardResumenesWhatsAppCanastoV1";
-const WHATSAPP_LOCAL_BASE = "http://127.0.0.1:8774";
-const WHATSAPP_EXPECTED_VERSION = "V16-COORDENADAS-PREVIEW-2026-10-23";
-const WHATSAPP_LOCAL_URL = WHATSAPP_LOCAL_BASE + "/enviar";
 
 function leerCanastoResumenes() {
     try {
@@ -201200,6 +201411,7 @@ function leerCanastoResumenes() {
 function guardarCanastoResumenes(canasto) {
     localStorage.setItem(RESUMEN_CANASTO_KEY, JSON.stringify(canasto));
     actualizarUIResumenCanasto();
+    renderizarPreparadorResumenes();
 }
 
 function alternarResumenCanasto(boton) {
@@ -201244,130 +201456,238 @@ function actualizarUIResumenCanasto() {
 
     const contador = document.getElementById("summaryBasketCount");
     if (contador) contador.textContent = String(canasto.length);
+
+    const estado = document.getElementById("summaryBasketStatus");
+    if (estado) {
+        estado.textContent = canasto.length
+            ? canasto.length + (canasto.length === 1 ? " resumen pendiente" : " resúmenes pendientes")
+            : "";
+    }
 }
 
-async function enviarResumenesCanasto() {
-    const canasto = leerCanastoResumenes();
+function escaparHtmlResumen(valor) {
+    return String(valor == null ? "" : valor)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function normalizarTelefonoManual(valor) {
+    const texto = String(valor || "").trim();
+    if (!texto || texto.toUpperCase() === "REVISAR") return "";
+
+    const digitos = texto.replace(/\D/g, "");
+    if (digitos.length === 13 && digitos.startsWith("549")) return digitos;
+    if (digitos.length === 10) return "549" + digitos;
+    if (digitos.length === 12 && digitos.startsWith("54")) {
+        return "549" + digitos.slice(2);
+    }
+    return "";
+}
+
+function monedaResumenManual(valor) {
+    const n = Number(valor || 0);
+    const fijo = Number.isFinite(n) ? n : 0;
+    const partes = fijo.toFixed(2).split(".");
+    const entero = partes[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    return "$" + entero + "," + partes[1];
+}
+
+function mensajeResumenManual(item) {
+    return (
+        "Buenas tardes, somos del equipo de cobranzas de Topigs Norsvin. " +
+        "Adjuntamos su resumen de cuenta actualizado.
+
+" +
+        "Según nuestros registros, la deuda total es de " + monedaResumenManual(item.total) +
+        ", de los cuales " + monedaResumenManual(item.vencido) +
+        " están vencidos, solicitando por favor la cancelación de dicho saldo. " +
+        "Ante cualquier duda o consulta, quedamos a disposición."
+    );
+}
+
+function urlPdfResumen(codigo) {
+    return new URL("./resumenes/" + encodeURIComponent(String(codigo)) + ".pdf", window.location.href).href;
+}
+
+function rutaWindowsPdfResumen(codigo) {
+    const url = new URL(urlPdfResumen(codigo));
+    if (url.protocol !== "file:") return url.href;
+
+    let ruta = decodeURIComponent(url.pathname || "");
+    ruta = ruta.replace(/^\/([A-Za-z]:)/, "$1");
+    return ruta.replace(/\//g, "\");
+}
+
+function copiarTextoFallback(texto) {
+    const area = document.createElement("textarea");
+    area.value = texto;
+    area.setAttribute("readonly", "");
+    area.style.position = "fixed";
+    area.style.opacity = "0";
+    document.body.appendChild(area);
+    area.select();
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+    document.body.removeChild(area);
+    return ok;
+}
+
+async function copiarRutaPdfResumen(codigo) {
+    const ruta = rutaWindowsPdfResumen(codigo);
+    try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(ruta);
+            return true;
+        }
+    } catch (e) {}
+    return copiarTextoFallback(ruta);
+}
+
+function obtenerResumenCanasto(codigo) {
+    return leerCanastoResumenes().find(x => String(x.codigo) === String(codigo));
+}
+
+function prepararEnvioManual(codigo) {
+    const item = obtenerResumenCanasto(codigo);
+    if (!item) return;
+
+    const telefono = normalizarTelefonoManual(item.telefono);
     const estado = document.getElementById("summaryBasketStatus");
 
-    if (!canasto.length) {
-        estado.textContent = "El canasto está vacío.";
+    if (!telefono) {
+        if (estado) estado.textContent = "El contacto de " + item.razon + " está vacío, en REVISAR o tiene un formato no válido.";
         return;
     }
 
+    // La copia se hace de forma sincrónica dentro del mismo clic para que
+    // Chrome no bloquee la apertura de WhatsApp como popup.
+    const ruta = rutaWindowsPdfResumen(item.codigo);
+    const copiado = copiarTextoFallback(ruta);
+    const mensaje = mensajeResumenManual(item);
+    const whatsappUrl =
+        "https://web.whatsapp.com/send?phone=" + encodeURIComponent(telefono) +
+        "&text=" + encodeURIComponent(mensaje);
+
+    window.open(whatsappUrl, "_blank", "noopener");
+
+    if (estado) {
+        estado.textContent = copiado
+            ? "WhatsApp abierto para " + item.razon + ". La ruta del PDF quedó copiada: pegala con Ctrl+V al adjuntar Documento."
+            : "WhatsApp abierto para " + item.razon + ". Usá 'Abrir PDF' si necesitás localizar el archivo.";
+    }
+}
+
+function abrirPdfManual(codigo) {
+    window.open(urlPdfResumen(codigo), "_blank", "noopener");
+}
+
+async function copiarMensajeManual(codigo) {
+    const item = obtenerResumenCanasto(codigo);
+    if (!item) return;
+    const mensaje = mensajeResumenManual(item);
+    let ok = false;
     try {
-        const readyResp = await fetch(WHATSAPP_LOCAL_BASE + "/estado");
-        const readyData = await readyResp.json();
-
-        if (!readyResp.ok || !readyData.ok || !readyData.ready) {
-            throw new Error("El enviador todavía no está listo.");
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(mensaje);
+            ok = true;
         }
+    } catch (e) {}
+    if (!ok) ok = copiarTextoFallback(mensaje);
 
-        if (String(readyData.version || "") !== WHATSAPP_EXPECTED_VERSION) {
-            throw new Error(
-                "Versión incorrecta del enviador: " +
-                String(readyData.version || "desconocida") +
-                ". Se esperaba: " + WHATSAPP_EXPECTED_VERSION
-            );
-        }
+    const estado = document.getElementById("summaryBasketStatus");
+    if (estado) estado.textContent = ok ? "Mensaje copiado." : "No se pudo copiar el mensaje.";
+}
 
-        estado.textContent =
-            "Enviador " + readyData.version +
-            " conectado. Enviando " + canasto.length + " resumen(es)...";
+function marcarResumenEnviado(codigo) {
+    const restante = leerCanastoResumenes().filter(x => String(x.codigo) !== String(codigo));
+    guardarCanastoResumenes(restante);
+}
 
-        const resp = await fetch(WHATSAPP_LOCAL_URL, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ items: canasto })
-        });
+function vaciarCanastoResumenes() {
+    localStorage.removeItem(RESUMEN_CANASTO_KEY);
+    actualizarUIResumenCanasto();
+    renderizarPreparadorResumenes();
+}
 
-        const data = await resp.json();
-        if (!resp.ok || !data.ok) {
-            throw new Error(data.error || "El servicio local devolvió un error.");
-        }
+function renderizarPreparadorResumenes() {
+    const contenedor = document.getElementById("summaryBasketManualList");
+    if (!contenedor) return;
 
-        const inicio = Date.now();
-        const limiteMs = Math.max(180000, canasto.length * 90000);
+    const canasto = leerCanastoResumenes();
+    if (!canasto.length) {
+        contenedor.innerHTML = '<div class="summary-manual-empty">No hay resúmenes en el carrito.</div>';
+        return;
+    }
 
-        while (Date.now() - inicio < limiteMs) {
-            await new Promise(resolve => setTimeout(resolve, 1500));
+    contenedor.innerHTML = canasto.map(item => {
+        const telefono = normalizarTelefonoManual(item.telefono);
+        const telefonoTexto = telefono
+            ? "+" + telefono
+            : "Contacto pendiente de revisar";
+        const telefonoClase = telefono ? "" : " summary-manual-phone-bad";
+        const disabled = telefono ? "" : " disabled";
 
-            const estadoResp = await fetch(WHATSAPP_LOCAL_BASE + "/estado");
-            const estadoData = await estadoResp.json();
+        return (
+            '<div class="summary-manual-item">' +
+                '<div class="summary-manual-client">' +
+                    '<strong>' + escaparHtmlResumen(item.codigo + " · " + item.razon) + '</strong>' +
+                    '<div class="summary-manual-meta">' +
+                        'Deuda total: ' + escaparHtmlResumen(monedaResumenManual(item.total)) +
+                        ' · Vencido: ' + escaparHtmlResumen(monedaResumenManual(item.vencido)) +
+                        '<br><span class="' + telefonoClase.trim() + '">' + escaparHtmlResumen(telefonoTexto) + '</span>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="summary-manual-actions">' +
+                    '<button type="button" class="summary-manual-primary" onclick="prepararEnvioManual('' + escaparHtmlResumen(item.codigo) + '')"' + disabled + '>Preparar envío</button>' +
+                    '<button type="button" class="summary-manual-secondary" onclick="abrirPdfManual('' + escaparHtmlResumen(item.codigo) + '')">Abrir PDF</button>' +
+                    '<button type="button" class="summary-manual-secondary" onclick="copiarMensajeManual('' + escaparHtmlResumen(item.codigo) + '')">Copiar mensaje</button>' +
+                    '<button type="button" class="summary-manual-sent" onclick="marcarResumenEnviado('' + escaparHtmlResumen(item.codigo) + '')">✓ Enviado</button>' +
+                '</div>' +
+            '</div>'
+        );
+    }).join("");
+}
 
-            if (!estadoResp.ok || !estadoData.ok) continue;
+function abrirPreparadorResumenes() {
+    const canasto = leerCanastoResumenes();
+    const estado = document.getElementById("summaryBasketStatus");
+    if (!canasto.length) {
+        if (estado) estado.textContent = "El carrito está vacío.";
+        return;
+    }
 
-            const r = estadoData.resultado || {};
-            if (!estadoData.procesando && r.terminado) {
-                const enviados = Number(r.enviados || 0);
-                const omitidos = Number(r.omitidos || 0);
-                const errores = Number(r.errores || 0);
+    renderizarPreparadorResumenes();
+    const overlay = document.getElementById("summaryBasketOverlay");
+    if (overlay) {
+        overlay.classList.add("open");
+        overlay.setAttribute("aria-hidden", "false");
+    }
+}
 
-                const quitar = new Set([
-                    ...(r.codigos_enviados || []).map(String),
-                    ...(r.codigos_omitidos || []).map(String)
-                ]);
-
-                const restante = leerCanastoResumenes().filter(
-                    x => !quitar.has(String(x.codigo))
-                );
-                guardarCanastoResumenes(restante);
-
-                if (errores > 0) {
-                    const detalleError = String(r.detalle_error || "");
-                    estado.textContent =
-                        "Enviados: " + enviados +
-                        ". Omitidos: " + omitidos +
-                        ". Con error: " + errores +
-                        (detalleError ? ". Error: " + detalleError : "") +
-                        ". Los que fallaron siguen en el carrito.";
-                } else {
-                    estado.textContent =
-                        "Enviados: " + enviados +
-                        ". Omitidos: " + omitidos + ".";
-                }
-                return;
-            }
-        }
-
-        estado.textContent =
-            "El envío sigue sin confirmarse. Los resúmenes permanecen en el carrito.";
-    } catch (err) {
-        estado.textContent =
-            "No se pudo usar el enviador: " + String(err && err.message ? err.message : err);
-        console.error(err);
+function cerrarPreparadorResumenes() {
+    const overlay = document.getElementById("summaryBasketOverlay");
+    if (overlay) {
+        overlay.classList.remove("open");
+        overlay.setAttribute("aria-hidden", "true");
     }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     actualizarUIResumenCanasto();
-
-    const estado = document.getElementById("summaryBasketStatus");
-    fetch(WHATSAPP_LOCAL_BASE + "/estado")
-        .then(r => r.json().then(data => ({ok: r.ok, data})))
-        .then(({ok, data}) => {
-            if (!estado || !ok || !data || !data.ok) return;
-            const version = String(data.version || "desconocida");
-            if (version === WHATSAPP_EXPECTED_VERSION) {
-                estado.textContent = "Enviador conectado: " + version;
-            } else {
-                estado.textContent =
-                    "ATENCIÓN: enviador incorrecto conectado: " + version +
-                    ". Se esperaba " + WHATSAPP_EXPECTED_VERSION + ".";
-            }
-        })
-        .catch(() => {
-            if (estado) {
-                estado.textContent =
-                    "Enviador V13 no conectado. Abrí INICIAR_ENVIADOR_WHATSAPP.bat.";
-            }
-        });
+    renderizarPreparadorResumenes();
 });
 
 document.addEventListener("keydown", function(evento) {
     if (evento.key === "Escape") {
+        const basketOverlay = document.getElementById("summaryBasketOverlay");
+        if (basketOverlay && basketOverlay.classList.contains("open")) {
+            cerrarPreparadorResumenes();
+            return;
+        }
+
         const overlay = document.getElementById("clientDetailOverlay");
         if (overlay && overlay.classList.contains("open")) {
             cerrarDetalleCliente();
