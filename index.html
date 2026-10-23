@@ -196666,18 +196666,11 @@ function prepararEnvioManual(codigo) {
         "https://web.whatsapp.com/send?phone=" + encodeURIComponent(telefono) +
         "&text=" + encodeURIComponent(mensaje);
 
-    // Reutilizar siempre la misma pestaña/ventana de WhatsApp.
-    // El nombre fijo evita que "Preparar envío" abra una nueva por cliente.
-    const ventanaWhatsapp = window.open(
-        whatsappUrl,
-        "whatsapp_cobranzas"
-    );
-
-    if (ventanaWhatsapp) {
-        try {
-            ventanaWhatsapp.focus();
-        } catch (e) {}
-    }
+    // Abrir WhatsApp EN ESTA MISMA PESTAÑA.
+    // No usamos window.open porque WhatsApp Web puede aislar la pestaña
+    // mediante políticas del navegador y Chrome termina creando otra ventana.
+    // Al terminar de enviar, usar Atrás del navegador para volver al dashboard.
+    window.location.assign(whatsappUrl);
 
     if (estado) {
         estado.textContent = copiado
