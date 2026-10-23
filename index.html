@@ -200355,7 +200355,8 @@ async function copiarDetalleCliente() {
 
 
 const RESUMEN_CANASTO_KEY = "dashboardResumenesWhatsAppCanastoV1";
-const WHATSAPP_LOCAL_URL = "http://127.0.0.1:8766/enviar";
+const WHATSAPP_LOCAL_BASE = "http://127.0.0.1:8767";
+const WHATSAPP_LOCAL_URL = WHATSAPP_LOCAL_BASE + "/enviar";
 
 function leerCanastoResumenes() {
     try {
@@ -200425,9 +200426,16 @@ async function enviarResumenesCanasto() {
         return;
     }
 
-    estado.textContent = "Enviando " + canasto.length + " resumen(es)...";
-
     try {
+        const readyResp = await fetch(WHATSAPP_LOCAL_BASE + "/estado");
+        const readyData = await readyResp.json();
+
+        if (!readyResp.ok || !readyData.ok || !readyData.ready) {
+            throw new Error("WhatsApp Web todavía no está listo.");
+        }
+
+        estado.textContent = "Enviando " + canasto.length + " resumen(es)...";
+
         const resp = await fetch(WHATSAPP_LOCAL_URL, {
             method: "POST",
             headers: {
@@ -200437,19 +200445,57 @@ async function enviarResumenesCanasto() {
         });
 
         const data = await resp.json();
-
         if (!resp.ok || !data.ok) {
             throw new Error(data.error || "El servicio local devolvió un error.");
         }
 
-        estado.textContent =
-            "Proceso iniciado: " + canasto.length +
-            " resumen(es). Los contactos REVISAR o sin número se omiten automáticamente.";
+        const inicio = Date.now();
+        const limiteMs = Math.max(180000, canasto.length * 90000);
 
-        guardarCanastoResumenes([]);
+        while (Date.now() - inicio < limiteMs) {
+            await new Promise(resolve => setTimeout(resolve, 1500));
+
+            const estadoResp = await fetch(WHATSAPP_LOCAL_BASE + "/estado");
+            const estadoData = await estadoResp.json();
+
+            if (!estadoResp.ok || !estadoData.ok) continue;
+
+            const r = estadoData.resultado || {};
+            if (!estadoData.procesando && r.terminado) {
+                const enviados = Number(r.enviados || 0);
+                const omitidos = Number(r.omitidos || 0);
+                const errores = Number(r.errores || 0);
+
+                const quitar = new Set([
+                    ...(r.codigos_enviados || []).map(String),
+                    ...(r.codigos_omitidos || []).map(String)
+                ]);
+
+                const restante = leerCanastoResumenes().filter(
+                    x => !quitar.has(String(x.codigo))
+                );
+                guardarCanastoResumenes(restante);
+
+                if (errores > 0) {
+                    estado.textContent =
+                        "Enviados: " + enviados +
+                        ". Omitidos: " + omitidos +
+                        ". Con error: " + errores +
+                        ". Los que fallaron siguen en el carrito.";
+                } else {
+                    estado.textContent =
+                        "Enviados: " + enviados +
+                        ". Omitidos: " + omitidos + ".";
+                }
+                return;
+            }
+        }
+
+        estado.textContent =
+            "El envío sigue sin confirmarse. Los resúmenes permanecen en el carrito.";
     } catch (err) {
         estado.textContent =
-            "No pude conectar con el enviador local. Abrí 'INICIAR ENVIADOR WHATSAPP.bat'.";
+            "El enviador no está listo. Abrí el BAT y esperá a que diga 'WhatsApp Web listo'.";
         console.error(err);
     }
 }
