@@ -201498,9 +201498,7 @@ function monedaResumenManual(valor) {
 function mensajeResumenManual(item) {
     return (
         "Buenas tardes, somos del equipo de cobranzas de Topigs Norsvin. " +
-        "Adjuntamos su resumen de cuenta actualizado.
-
-" +
+        "Adjuntamos su resumen de cuenta actualizado.\n\n" +
         "Según nuestros registros, la deuda total es de " + monedaResumenManual(item.total) +
         ", de los cuales " + monedaResumenManual(item.vencido) +
         " están vencidos, solicitando por favor la cancelación de dicho saldo. " +
@@ -201518,7 +201516,7 @@ function rutaWindowsPdfResumen(codigo) {
 
     let ruta = decodeURIComponent(url.pathname || "");
     ruta = ruta.replace(/^\/([A-Za-z]:)/, "$1");
-    return ruta.replace(/\//g, "\");
+    return ruta.replace(/\//g, "\\");
 }
 
 function copiarTextoFallback(texto) {
@@ -201641,10 +201639,10 @@ function renderizarPreparadorResumenes() {
                     '</div>' +
                 '</div>' +
                 '<div class="summary-manual-actions">' +
-                    '<button type="button" class="summary-manual-primary" onclick="prepararEnvioManual('' + escaparHtmlResumen(item.codigo) + '')"' + disabled + '>Preparar envío</button>' +
-                    '<button type="button" class="summary-manual-secondary" onclick="abrirPdfManual('' + escaparHtmlResumen(item.codigo) + '')">Abrir PDF</button>' +
-                    '<button type="button" class="summary-manual-secondary" onclick="copiarMensajeManual('' + escaparHtmlResumen(item.codigo) + '')">Copiar mensaje</button>' +
-                    '<button type="button" class="summary-manual-sent" onclick="marcarResumenEnviado('' + escaparHtmlResumen(item.codigo) + '')">✓ Enviado</button>' +
+                    '<button type="button" class="summary-manual-primary" onclick="prepararEnvioManual(\'' + escaparHtmlResumen(item.codigo) + '\')"' + disabled + '>Preparar envío</button>' +
+                    '<button type="button" class="summary-manual-secondary" onclick="abrirPdfManual(\'' + escaparHtmlResumen(item.codigo) + '\')">Abrir PDF</button>' +
+                    '<button type="button" class="summary-manual-secondary" onclick="copiarMensajeManual(\'' + escaparHtmlResumen(item.codigo) + '\')">Copiar mensaje</button>' +
+                    '<button type="button" class="summary-manual-sent" onclick="marcarResumenEnviado(\'' + escaparHtmlResumen(item.codigo) + '\')">✓ Enviado</button>' +
                 '</div>' +
             '</div>'
         );
