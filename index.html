@@ -2444,6 +2444,49 @@ tr:hover td,
 .net-flat { color: #c0c0c5; }
 
 
+
+/* ============================================================
+   AJUSTE TIPOGRAFICO SOLICITADO
+   - Deuda por cliente: Código, Razón social y Vendedor
+   - Cobranzas: todas las columnas
+   ============================================================ */
+
+/* Deuda por cliente: +1 px y mayor peso en las tres primeras columnas */
+#tablaResumenDeuda tbody td:nth-child(1),
+#tablaResumenDeuda tbody td:nth-child(2),
+#tablaResumenDeuda tbody td:nth-child(3) {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#tablaResumenDeuda tbody td:nth-child(2) .client-detail-link {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* Encabezados de Código / Razón social / Vendedor más marcados */
+#tablaResumenDeuda .code-header .header-title {
+    font-size: 12px;
+    font-weight: 900;
+}
+
+#tablaResumenDeuda .reason-header .header-title,
+#tablaResumenDeuda .seller-header .header-title {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+/* Cobranzas: +1 px y mayor peso en todas las columnas */
+#tablaCobros tbody td {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#tablaCobros thead .header-title {
+    font-size: 13px;
+    font-weight: 900;
+}
+
 </style>
 </head>
 
