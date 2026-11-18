@@ -7,6 +7,10 @@
     "razon_social": "AGROBI SA",
     "archivo": "000002_AGROBI SA.pdf"
   },
+  "000003": {
+    "razon_social": "AGROENFOQUE SRL",
+    "archivo": "000003_AGROENFOQUE SRL.pdf"
+  },
   "000004": {
     "razon_social": "AMPUERO",
     "archivo": "000004_AMPUERO.pdf"
@@ -659,6 +663,10 @@
     "razon_social": "CIAN ALFREDO Y JUAN CARLOS",
     "archivo": "000375_CIAN ALFREDO Y JUAN CARLOS.pdf"
   },
+  "000377": {
+    "razon_social": "NRPORK",
+    "archivo": "000377_NRPORK.pdf"
+  },
   "000379": {
     "razon_social": "COOP AGRIC. Y GAN. Y DE SERVIC",
     "archivo": "000379_COOP AGRIC. Y GAN. Y DE SERVIC.pdf"
@@ -811,6 +819,10 @@
     "razon_social": "FURLAN HNOS S.A.S.",
     "archivo": "000489_FURLAN HNOS S.A.S..pdf"
   },
+  "000492": {
+    "razon_social": "GRUPORCINO S.A.",
+    "archivo": "000492_GRUPORCINO S.A..pdf"
+  },
   "000495": {
     "razon_social": "PAMPA CENTRO SRL",
     "archivo": "000495_PAMPA CENTRO SRL.pdf"
@@ -834,6 +846,10 @@
   "000518": {
     "razon_social": "EL PADRILLO DE CAÑUELAS SOCIED",
     "archivo": "000518_EL PADRILLO DE CAÑUELAS SOCIED.pdf"
+  },
+  "000522": {
+    "razon_social": "TESTA FIDEL ANTONIO JUAN",
+    "archivo": "000522_TESTA FIDEL ANTONIO JUAN.pdf"
   },
   "000523": {
     "razon_social": "PROYAGRO S.A.",
@@ -911,6 +927,10 @@
     "razon_social": "PARRA VICENTE ALFREDO EMIL",
     "archivo": "000595_PARRA VICENTE ALFREDO EMIL.pdf"
   },
+  "000599": {
+    "razon_social": "CERDOS LA MACETA S. R. L.",
+    "archivo": "000599_CERDOS LA MACETA S. R. L..pdf"
+  },
   "000601": {
     "razon_social": "GRANJAS DE BAVIO S.A.",
     "archivo": "000601_GRANJAS DE BAVIO S.A..pdf"
@@ -962,6 +982,10 @@
   "000648": {
     "razon_social": "BONIS VALERIA NOELI",
     "archivo": "000648_BONIS VALERIA NOELI.pdf"
+  },
+  "000650": {
+    "razon_social": "DEZEO GUILLERMO OMAR",
+    "archivo": "000650_DEZEO GUILLERMO OMAR.pdf"
   },
   "000660": {
     "razon_social": "LA MACA PRODUCCION PORCINA SRL",
@@ -1235,6 +1259,10 @@
     "razon_social": "EL CAPORAL S.A.S.",
     "archivo": "000800_EL CAPORAL S.A.S..pdf"
   },
+  "000801": {
+    "razon_social": "LITTA JUAN JOSE",
+    "archivo": "000801_LITTA JUAN JOSE.pdf"
+  },
   "000802": {
     "razon_social": "ALBA RODRIGO EMMANUEL",
     "archivo": "000802_ALBA RODRIGO EMMANUEL.pdf"
@@ -1419,10 +1447,6 @@
     "razon_social": "PRITCHARD JORGE MARCELO",
     "archivo": "000877_PRITCHARD JORGE MARCELO.pdf"
   },
-  "000883": {
-    "razon_social": "PABLO JORGE ALBERTO",
-    "archivo": "000883_PABLO JORGE ALBERTO.pdf"
-  },
   "000885": {
     "razon_social": "ROBIN MARIANO MIGUEL",
     "archivo": "000885_ROBIN MARIANO MIGUEL.pdf"
@@ -1486,10 +1510,6 @@
   "000904": {
     "razon_social": "BECCARIA JUANA VICTORIA",
     "archivo": "000904_BECCARIA JUANA VICTORIA.pdf"
-  },
-  "000905": {
-    "razon_social": "SANCHOLUZ MIGUEL",
-    "archivo": "000905_SANCHOLUZ MIGUEL.pdf"
   },
   "000906": {
     "razon_social": "ALTAMIRANO HORACIO DANIEL",
@@ -1582,10 +1602,6 @@
   "000943": {
     "razon_social": "BERTONE OSVALDO DOMINGO Y BERT",
     "archivo": "000943_BERTONE OSVALDO DOMINGO Y BERT.pdf"
-  },
-  "000944": {
-    "razon_social": "TORRES USTARES MARCIA ARIANA",
-    "archivo": "000944_TORRES USTARES MARCIA ARIANA.pdf"
   },
   "000945": {
     "razon_social": "CIAMPICHINI OMAR ALBERTO",
