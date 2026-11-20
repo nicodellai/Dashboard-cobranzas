@@ -7,10 +7,6 @@
     "razon_social": "AGROBI SA",
     "archivo": "000002_AGROBI SA.pdf"
   },
-  "000003": {
-    "razon_social": "AGROENFOQUE SRL",
-    "archivo": "000003_AGROENFOQUE SRL.pdf"
-  },
   "000004": {
     "razon_social": "AMPUERO",
     "archivo": "000004_AMPUERO.pdf"
@@ -122,6 +118,10 @@
   "000045": {
     "razon_social": "GRANJA SANTA CAMILA SRL",
     "archivo": "000045_GRANJA SANTA CAMILA SRL.pdf"
+  },
+  "000047": {
+    "razon_social": "KIPP ESTELA",
+    "archivo": "000047_KIPP ESTELA.pdf"
   },
   "000048": {
     "razon_social": "KOROVAICHUK OSCAR",
@@ -563,10 +563,6 @@
     "razon_social": "ROBOL NESTOR DANIEL",
     "archivo": "000319_ROBOL NESTOR DANIEL.pdf"
   },
-  "000320": {
-    "razon_social": "CATTELAN JOSE LUIS",
-    "archivo": "000320_CATTELAN JOSE LUIS.pdf"
-  },
   "000324": {
     "razon_social": "REBOTTARO SANTIAGO JAVIER",
     "archivo": "000324_REBOTTARO SANTIAGO JAVIER.pdf"
@@ -655,17 +651,9 @@
     "razon_social": "BARACUTEY AGROPECUARIA S.R.L",
     "archivo": "000372_BARACUTEY AGROPECUARIA S.R.L.pdf"
   },
-  "000374": {
-    "razon_social": "CIPRIAN ALEJANDRO OSCAR",
-    "archivo": "000374_CIPRIAN ALEJANDRO OSCAR.pdf"
-  },
   "000375": {
     "razon_social": "CIAN ALFREDO Y JUAN CARLOS",
     "archivo": "000375_CIAN ALFREDO Y JUAN CARLOS.pdf"
-  },
-  "000377": {
-    "razon_social": "NRPORK",
-    "archivo": "000377_NRPORK.pdf"
   },
   "000379": {
     "razon_social": "COOP AGRIC. Y GAN. Y DE SERVIC",
@@ -818,10 +806,6 @@
   "000489": {
     "razon_social": "FURLAN HNOS S.A.S.",
     "archivo": "000489_FURLAN HNOS S.A.S..pdf"
-  },
-  "000492": {
-    "razon_social": "GRUPORCINO S.A.",
-    "archivo": "000492_GRUPORCINO S.A..pdf"
   },
   "000495": {
     "razon_social": "PAMPA CENTRO SRL",
@@ -982,10 +966,6 @@
   "000648": {
     "razon_social": "BONIS VALERIA NOELI",
     "archivo": "000648_BONIS VALERIA NOELI.pdf"
-  },
-  "000650": {
-    "razon_social": "DEZEO GUILLERMO OMAR",
-    "archivo": "000650_DEZEO GUILLERMO OMAR.pdf"
   },
   "000660": {
     "razon_social": "LA MACA PRODUCCION PORCINA SRL",
@@ -1227,10 +1207,6 @@
     "razon_social": "SAN JUAN DE TOTORAL S A",
     "archivo": "000789_SAN JUAN DE TOTORAL S A.pdf"
   },
-  "000791": {
-    "razon_social": "LA TATA S. A. S.",
-    "archivo": "000791_LA TATA S. A. S..pdf"
-  },
   "000792": {
     "razon_social": "RAUCH CRISTIAN F, RAUCH SERGIO",
     "archivo": "000792_RAUCH CRISTIAN F, RAUCH SERGIO.pdf"
@@ -1259,10 +1235,6 @@
     "razon_social": "EL CAPORAL S.A.S.",
     "archivo": "000800_EL CAPORAL S.A.S..pdf"
   },
-  "000801": {
-    "razon_social": "LITTA JUAN JOSE",
-    "archivo": "000801_LITTA JUAN JOSE.pdf"
-  },
   "000802": {
     "razon_social": "ALBA RODRIGO EMMANUEL",
     "archivo": "000802_ALBA RODRIGO EMMANUEL.pdf"
@@ -1270,10 +1242,6 @@
   "000803": {
     "razon_social": "OLEZZA NESTOR FABIAN",
     "archivo": "000803_OLEZZA NESTOR FABIAN.pdf"
-  },
-  "000805": {
-    "razon_social": "JUAN MONDINO E HIJOS S.A.",
-    "archivo": "000805_JUAN MONDINO E HIJOS S.A..pdf"
   },
   "000808": {
     "razon_social": "ARROYO JOSE EMILIO",
@@ -1318,10 +1286,6 @@
   "000824": {
     "razon_social": "DOS HACHES DISTRIBUCIONES S.R.",
     "archivo": "000824_DOS HACHES DISTRIBUCIONES S.R..pdf"
-  },
-  "000827": {
-    "razon_social": "GOÑI RUBEN ALBERTO",
-    "archivo": "000827_GOÑI RUBEN ALBERTO.pdf"
   },
   "000828": {
     "razon_social": "HAUCKE RICARDO JOSE",
