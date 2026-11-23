@@ -2778,6 +2778,36 @@ tr:hover td,
 .payment-loaded-none { color: #c0c0c5; }
 #tablaResumenDeuda .payment-minimum-cell { font-weight: 800; white-space: nowrap; }
 
+/* Fecha ultimo pago: el titulo debe caber por completo dentro de su columna.
+   No cambiar el ancho de otras columnas ni los encabezados de otros bloques. */
+#tablaResumenDeuda .last-payment-header {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 8px 6px !important;
+}
+#tablaResumenDeuda .last-payment-header .period-title {
+    display: block;
+    height: auto;
+    min-height: 21px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 5px;
+    font-size: 12px;
+    line-height: 1.2;
+    white-space: normal !important;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+#tablaResumenDeuda .last-payment-header .small-label {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
 </style>
 </head>
 
