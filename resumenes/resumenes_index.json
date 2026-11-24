@@ -155,6 +155,10 @@
     "razon_social": "MONVALE CARLOS",
     "archivo": "000059_MONVALE CARLOS.pdf"
   },
+  "000062": {
+    "razon_social": "R. Y D. PERLO S.R.L",
+    "archivo": "000062_R. Y D. PERLO S.R.L.pdf"
+  },
   "000064": {
     "razon_social": "PIEMONTE SRL",
     "archivo": "000064_PIEMONTE SRL.pdf"
@@ -278,6 +282,10 @@
   "000125": {
     "razon_social": "RASINO MARIO RICARDO",
     "archivo": "000125_RASINO MARIO RICARDO.pdf"
+  },
+  "000128": {
+    "razon_social": "POZO DE LA VEGA SA",
+    "archivo": "000128_POZO DE LA VEGA SA.pdf"
   },
   "000130": {
     "razon_social": "LA LAGUNITA SA",
@@ -438,6 +446,10 @@
   "000216": {
     "razon_social": "LAINATTI JULIAN ANDRES",
     "archivo": "000216_LAINATTI JULIAN ANDRES.pdf"
+  },
+  "000223": {
+    "razon_social": "BARON REMIGIO ANGEL",
+    "archivo": "000223_BARON REMIGIO ANGEL.pdf"
   },
   "000225": {
     "razon_social": "LARCE S.R.L.",
@@ -650,6 +662,10 @@
   "000372": {
     "razon_social": "BARACUTEY AGROPECUARIA S.R.L",
     "archivo": "000372_BARACUTEY AGROPECUARIA S.R.L.pdf"
+  },
+  "000374": {
+    "razon_social": "CIPRIAN ALEJANDRO OSCAR",
+    "archivo": "000374_CIPRIAN ALEJANDRO OSCAR.pdf"
   },
   "000375": {
     "razon_social": "CIAN ALFREDO Y JUAN CARLOS",
@@ -1139,6 +1155,10 @@
     "razon_social": "DI RICO ALFREDO",
     "archivo": "000764_DI RICO ALFREDO.pdf"
   },
+  "000766": {
+    "razon_social": "BOURDET JUAN PEDRO",
+    "archivo": "000766_BOURDET JUAN PEDRO.pdf"
+  },
   "000767": {
     "razon_social": "CERDO DE LOS LLANOS S.A.U",
     "archivo": "000767_CERDO DE LOS LLANOS S.A.U.pdf"
@@ -1207,6 +1227,10 @@
     "razon_social": "SAN JUAN DE TOTORAL S A",
     "archivo": "000789_SAN JUAN DE TOTORAL S A.pdf"
   },
+  "000791": {
+    "razon_social": "LA TATA S. A. S.",
+    "archivo": "000791_LA TATA S. A. S..pdf"
+  },
   "000792": {
     "razon_social": "RAUCH CRISTIAN F, RAUCH SERGIO",
     "archivo": "000792_RAUCH CRISTIAN F, RAUCH SERGIO.pdf"
@@ -1242,6 +1266,10 @@
   "000803": {
     "razon_social": "OLEZZA NESTOR FABIAN",
     "archivo": "000803_OLEZZA NESTOR FABIAN.pdf"
+  },
+  "000805": {
+    "razon_social": "JUAN MONDINO E HIJOS S.A.",
+    "archivo": "000805_JUAN MONDINO E HIJOS S.A..pdf"
   },
   "000808": {
     "razon_social": "ARROYO JOSE EMILIO",
@@ -1374,6 +1402,10 @@
   "000862": {
     "razon_social": "EL PASO DEL VIRREY S.A.",
     "archivo": "000862_EL PASO DEL VIRREY S.A..pdf"
+  },
+  "000864": {
+    "razon_social": "LONGINOTTI HORACIO EMILIO",
+    "archivo": "000864_LONGINOTTI HORACIO EMILIO.pdf"
   },
   "000866": {
     "razon_social": "RIOS IRENE CRISTINA",
@@ -1555,6 +1587,10 @@
     "razon_social": "VALCAN SRL",
     "archivo": "000932_VALCAN SRL.pdf"
   },
+  "000936": {
+    "razon_social": "MADALU S. R. L.",
+    "archivo": "000936_MADALU S. R. L..pdf"
+  },
   "000941": {
     "razon_social": "ACUÑA ANDREA VERONICA",
     "archivo": "000941_ACUÑA ANDREA VERONICA.pdf"
@@ -1603,8 +1639,16 @@
     "razon_social": "MARTINEZ MIRSE LORENA CECILIA",
     "archivo": "000955_MARTINEZ MIRSE LORENA CECILIA.pdf"
   },
+  "000956": {
+    "razon_social": "COMERCIALIZADORA EL TERO S. A.",
+    "archivo": "000956_COMERCIALIZADORA EL TERO S. A..pdf"
+  },
   "000957": {
     "razon_social": "EL CAMILO S. R. L.",
     "archivo": "000957_EL CAMILO S. R. L..pdf"
+  },
+  "000958": {
+    "razon_social": "NOVA PORK S.A.",
+    "archivo": "000958_NOVA PORK S.A..pdf"
   }
 }
